@@ -46,4 +46,4 @@ This year, the first 50,000 participants who successfully complete the challenge
     4. commit the code
     5. Make pull request
 ***
-[![ko-fi](https://getsiteglue.com/wp-content/uploads/2018/04/demo-button.png)](https://www.factsprime.com/)
+[![ko-fi target="_blank" rel="noopener"](https://getsiteglue.com/wp-content/uploads/2018/04/demo-button.png)](https://www.factsprime.com/)
