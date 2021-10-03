@@ -1,4 +1,5 @@
 <h1 align="center"> Hacktoberfest 2021 </h1>
+<img src="hactoberfest-logo.jpg">
 
 ***
 <h3 align="center">
@@ -30,7 +31,7 @@ Hacktoberfest is open to everyone in our global community!
 
 This year, the first 50,000 participants who successfully complete the challenge will be eligible to receive a prize.
 
-**
+***
 ## Rules To Contribute To This Repo
 
 -   Visit the Website given Below (Live Demo)
