@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate cube</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+    .background{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* opacity: 0.5; */
+
+}
+
+.cube {
+    position: absolute;
+    left: 16.666666vw;
+    width: 66.66666vw;
+    height: 66.66666vw;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-animation: cube_rotate 120s linear infinite;
+    animation: cube_rotate 120s linear infinite
+}
+.cube_face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid rgb(194, 11, 11);
+    width: 100%;
+    height: 100%
+}
+.cube_face-front {
+    -webkit-transform: translateZ(33.33333vw);
+    transform: translateZ(33.33333vw)
+}
+.cube_face-back {
+    -webkit-transform: translateZ(-33.33333vw);
+    transform: translateZ(-33.33333vw)
+}
+.cube_face-top {
+    -webkit-transform: translateY(-33.33333vw) rotateX(90deg);
+    transform: translateY(-33.33333vw) rotateX(90deg)
+}
+.cube_face-right {
+    -webkit-transform: translateX(33.33333vw) rotateY(90deg);
+    transform: translateX(33.33333vw) rotateY(90deg)
+}
+.cube_face-bottom {
+    -webkit-transform: translateY(33.33333vw) rotateX(90deg);
+    transform: translateY(33.33333vw) rotateX(90deg)
+}
+.cube_face-left {
+    -webkit-transform: translateX(-33.33333vw) rotateY(90deg);
+    transform: translateX(-33.33333vw) rotateY(90deg)
+}
+@-webkit-keyframes cube_rotate {
+    100% {
+        -webkit-transform: rotateX(720deg) rotateY(360deg);
+        transform: rotateX(720deg) rotateY(360deg)
+    }
+}
+@keyframes cube_rotate {
+    100% {
+        -webkit-transform: rotateX(720deg) rotateY(360deg);
+        transform: rotateX(720deg) rotateY(360deg)
+    }
+}
+
+    </style>
+</head>
+
+<body>
+   
+    
+        <div class="rotate">
+            <div class="background is-inview" data-scroll="" data-scroll-speed="1">
+                <div class="cube">
+                    <div class="cube_face cube_face-front"></div>
+                    <div class="cube_face cube_face-back"></div>
+                    <div class="cube_face cube_face-top"></div>
+                    <div class="cube_face cube_face-right"></div>
+                    <div class="cube_face cube_face-bottom"></div>
+                    <div class="cube_face cube_face-left"></div>
+                </div>
+            </div>
+        </div>
+    
+
+</body>
+
+</html>
