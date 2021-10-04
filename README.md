@@ -36,7 +36,8 @@ This year, the first 50,000 participants who successfully complete the challenge
 
 -   Visit the Website given Below (Live Demo)
 -   Contribute a blogpost on any Topic .
--   Anything valuable.
+-   Anything valuable in this repository.
+-   Its main aim to promote  open source and increase  the craze of contributions among students.
 -   Or Contrubute any tool / pages
 
 ## Steps For Contribution
