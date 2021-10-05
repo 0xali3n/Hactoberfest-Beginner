@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+header{
+    height: 4vh;
+}
+nav{
+    background-color: #2874f0;
+    display: flex;
+    padding-top: 15px;
+   
+    font-family: 'Roboto', sans-serif;
+}
+
+nav img{
+    margin-left: 10vw;
+    width: 100px;
+    height: 30px;
+}
+
+nav input{
+    height: 5vh;
+    width: 40vw;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+.nav-p{
+    margin-left: 100px;
+}
+
+.inner-p{
+  
+    margin-left: 30px;
+    color: white;
+}
+
+
+
+.main-top{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+   
+}
+.top-box{
+    width: 7vw;
+    margin-left: 30px;
+    font-family: 'Oswald', sans-serif;
+}
+.top-box p{
+    text-align: center;
+}
+.top-box img{
+    width: 90px;
+    height: 90px;
+}
+
+.main-items{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(227, 231, 231);
+    padding: 12px;
+  display: flex;
+}
+.single-item{
+  text-align: center;
+  margin: 9px;
+  font-family: 'Oswald', sans-serif;
+}
+.single-item p{
+    margin: 4px;
+}
+#price{
+    color: green;
+}
+
+footer{
+    background-color: #2874f0;
+    color: white;
+   
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 2vh;
+}
+
+
+
+/* media queries */
+
+@media only screen and (max-width: 1024px) {
+    nav{
+        display: block;
+    }
+  
+    .main-top{
+        margin-top: 150px;
+        margin-left: 5px;
+    }
+    .top-box{
+        margin: 25px;
+    }
+    .main-items{
+        overflow-x: scroll;
+    }
+}
