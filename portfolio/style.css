@@ -1,0 +1,34 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.hr1 {
+    background-color: #c74444;
+    border-width: medium;
+}
+
+a {
+    color: aliceblue;
+}
+
+.hr2 {
+    background-color: #333133;
+    border-width: medium;
+}
+
+.navbar {
+    border: 0.5px solid;
+}
+
+.navbar-brand {
+    font-family: 'Lobster', cursive;
+    text-decoration: underline;
+}
+
+.h4 {
+    text-decoration: underline;
+}
+
+.num {
+    font-size: 30px;
+}
