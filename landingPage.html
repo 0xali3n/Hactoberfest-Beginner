@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free code camp landing page</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
   <style>
   /** global element styling **/
 
@@ -348,7 +353,10 @@ footer > span {
         <section id="hero">
             <h2>Handcrafted, home-made masterpieces</h2>
             <form id="form" action="https://www.freecodecamp.com/email-submit">
-                <input name="email" id="email" type="email" placeholder="Enter your email address" required />
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                     <input name="email" id="email" type="email" class="form-control" placeholder="Enter your email address" required />
+                </div>
                 <input id="submit" type="submit" value="Get Started" class="btn" />
             </form>
         </section>
@@ -438,7 +446,11 @@ footer > span {
             </footer>
         </div>
     </div>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
