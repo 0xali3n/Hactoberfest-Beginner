@@ -5,16 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
 </head>
 <body> 
-    <h1> <u>Html Form</u> </h1>
+    <h1 class="text-center"> <u>Html Form</u> </h1>
     
-    <form action="" >
-        <label for="name"> Name: </label><input type="text" name="" id="name" placeholder="enter the name of user "> <br><br>
-        <label for="passcode"> Password: </label> <input type="password" name="" id="passcode" placeholder="please enter password"><br><br>
+    <div class="container">
+    <form action="">
+
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input type="text" class="form-control" name="" id="name" placeholder="Enter the name of user ">
+        </div>
+
+
+        <div class="input-group">
+           <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+        </div>
         
-        <label for="email">Email: </label><input type="email" name="" id="email" placeholder="enter email "><br><br>
-        <label for="tel">Telephone Number:</label><input type="tel" name="" id="tel" placeholder="enter telephone "><br><br>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+
+        <div class="input-group">
+			<div class="col-sm-10">
+			
+				<div class="phone-list">
+				
+					<div class="input-group phone-input">
+						<span class="input-group-btn">
+							<button type="button" class="btn btn-default" aria-expanded="false"><span class="type-text">Phone</span> <span class="caret"></span></button>
+
+						</span>
+						<input type="hidden" name="phone[1][type]" class="type-input" value="" />
+						<input type="text" name="phone[1][number]" class="form-control" placeholder="+1 (999) 999 9999" />
+		    </div>
+        </div>
+
        
         <label for="time"></label><input type="time" name="" id="time"><br><br>
         <label for="date">Birthday:</label><input type="datetime-local" name="" id="date"><br> <br>
@@ -74,5 +105,6 @@
         <label for="textarea">Review</label><br><textarea placeholder="write what is in your mind " id="textarea" cols="30" rows="5"></textarea><br><br>
         <label for="submit"></label><input type="submit" value="Submit">
     </form>
+    </div>
 </body>
 </html>
