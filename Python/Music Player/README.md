@@ -5,14 +5,19 @@ In this tutorial, you're going to learn how to make your own MP3 Music Player in
 Requirements:
 To be able to follow this tutorial you need to have Tkinter and pygame installed on your machine
 
-Installation
-    Linux
-        sudo apt-get install python3-tk
-        pip3 install pygame
-​
+Installation:
 
-    Window
-        pip install pygame
+Linux:
+```
+sudo apt-get install python3-tk
+pip3 install pygame
+```
+​
+Windows:
+
+```
+pip install pygame
+```
 
 Now once everything is ready Installed, we now ready to begin coding our very own music player
 
