@@ -1,10 +1,14 @@
+/* google fonts import  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 
 header{
@@ -13,8 +17,7 @@ header{
 nav{
     background-color: #2874f0;
     display: flex;
-    padding-top: 15px;
-   
+    padding-top: 15px;   
     font-family: 'Roboto', sans-serif;
 }
 
@@ -22,34 +25,53 @@ nav img{
     margin-left: 10vw;
     width: 100px;
     height: 30px;
+    object-fit: contain;
+    padding: 5px 0;
 }
 
 nav input{
-    height: 5vh;
+    height: 5.5vh;
     width: 40vw;
     margin-left: 15px;
     padding-left: 15px;
+    padding: 0 16px;
+    border-radius: 2px ;
+    border: 0;
+    outline: 0 none;
+    font-size: 14px;  
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav-p{
     margin-left: 100px;
 }
 
-.inner-p{
-  
+.inner-p{  
     margin-left: 30px;
     color: white;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.account{
+    color: #2874f0;
+    font-weight: 500;
+    background-color: #fff;  
+    border-radius: 2px;   
+    padding: 5px 20px;
+    border: 1px solid #dbdbdb;
 }
 
 
 
 .main-top{
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
     margin-top: 40px;
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    align-items: center;
    
 }
 .top-box{
@@ -59,10 +81,12 @@ nav input{
 }
 .top-box p{
     text-align: center;
+    padding: 5px;
+    margin-right: 10px;
 }
 .top-box img{
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
 }
 
 .main-items{
@@ -87,12 +111,17 @@ nav input{
 footer{
     background-color: #2874f0;
     color: white;
-   
+    padding: 5px 0;
     text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 2vh;
+    /* height: 2vh; */
+}
+
+footer span{
+    color: rgb(14, 14, 124);
+    font-family: 'Poppins', sans-serif;
 }
 
 
