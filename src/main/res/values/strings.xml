@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Team Teller</string>
+    <string name="button">Button</string>
+    <string name="textview">TextView</string>
+    <string name="please_select_your_captain">Please select your captain</string>
+    <string-array name="team_cap">
+        <item>Dhoni</item>
+        <item>Virat</item>
+        <item>Morgan</item>
+        <item>Rohit</item>
+        <item>Rahul</item>
+        <item>Samsan</item>
+        <item>Williamson</item>
+        <item>Iyer</item>
+    </string-array>
+</resources>
