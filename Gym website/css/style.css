@@ -1,0 +1,116 @@
+        /* CSS Reset */
+        body {
+            color: white;
+            font-family: 'Otomanopee One', sans-serif;
+            margin: 0px;
+            padding: 0px;
+            background: url('../img/bg.jpg');
+            background-size: cover;
+        }
+
+        .left {
+            position: absolute;
+            left: 80px;
+            top: 20px;
+            display: inline-block;
+            /* border: 2px solid red; */
+        }
+
+        .left img {
+            padding: 0px 33px;
+            width: 55px;
+            filter: invert(100%);
+        }
+
+        .left div {
+            line-height: 0px;
+            text-align: center;
+            color: white;
+            font-size: 12px;
+        }
+
+        .mid {
+            display: block;
+            width: 50%;
+            margin: 20px auto;
+            /* border: 2px solid green; */
+        }
+
+        .right {
+            position: absolute;
+            right: 34px;
+            top: 20px;
+            display: inline-block;
+            /* border: 2px solid yellow; */
+        }
+
+        .navbar {
+            display: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 28px;
+            font-size: 15px;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            text-decoration: underline;
+            color: grey;
+        }
+
+        .btn {
+            font-family: 'Otomanopee One', sans-serif;
+            margin: 17px 7px;
+            color: white;
+            background-color: black;
+            padding: 4px 14px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgb(41, 40, 40);
+        }
+
+        .container {
+            border: 2px solid white;
+            margin: 64px 92px;
+            padding: 53px 103px;
+            border-radius: 26px;
+            width: 33%;
+        }
+
+        .form-group input {
+            font-family: 'Otomanopee One', sans-serif;
+            text-align: center;
+            display: block;
+            padding: 4px;
+            width: 401px;
+            border: 2px solid black;
+            margin: 15px auto;
+            border-radius: 11px;
+            font-size: 14px;
+
+        }
+
+        .container h2 {
+            text-align: center;
+        }
+
+        .container button {
+            display: block;
+            width: 35%;
+            padding: 5px;
+            font-size: 14px;
+            margin: 33px auto;
+        }
