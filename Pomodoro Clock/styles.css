@@ -1,0 +1,56 @@
+body{
+    color: gray;
+    padding-top: 50px;
+  }
+  .btn{
+    margin: 5px;
+    width: 150px;
+    font-weight: bold;
+  }
+  
+  .buttonSetTimeTo {
+    font-size: 125%;
+    width: 260px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 2px solid gray;
+    cursor:pointer;
+    overflow: hidden;
+    color: gray;
+  }
+    
+    .buttonStart{
+    font-size: 125%;
+    width: 260px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 2px solid gray;
+    cursor:pointer;
+    overflow: hidden;
+    color: gray;
+    }
+  
+  .timer{
+    font-weight: bold;
+    font-size: 125%;
+  }
+  
+  .buttonAdd{
+    font-size: 400%;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    color: gray;
+  }
+  
+  .buttonSub{
+    font-size: 400%;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    color: gray;
+  }
