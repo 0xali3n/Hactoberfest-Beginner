@@ -1,0 +1,215 @@
+#include <iostream>
+#include <fstream>
+#include <bits/stdc++.h>
+#include <string>
+using namespace std;
+
+
+/////////////////STUCTURE OF LINK LIST////////////////////////////
+class node
+{
+    public:
+        string word; //word to be inserted or searched
+        string mean;//meaning of word to be inserted or searched
+        node* next;//next pointer
+        node* prev;// previous pointer
+
+};
+///////////////ADDING WORD TO LINK LIST AT LAST/////////////////////////
+void add_to_dictionary(node* &head,node* &tail)
+{
+    string word1;
+    string mean1;
+    cout<<"ALERT! Use '/_'/ For Spaces"<<endl;
+    cout<<"Enter Your Word"<<endl;
+    cin>>word1;
+    cout<<"Enter  The Meaning Of Your Word"<<endl;
+    cin>>mean1;
+    ///////CREATING A NEW NODE//////
+    node* temp=head;
+    node* new_node=new node;
+    new_node->word=word1;
+    new_node->mean=mean1;
+    new_node->next=NULL;
+    new_node->prev=NULL;
+    if(head==NULL)
+    {
+        head=new_node;
+        tail=new_node;
+    }
+    else
+    {
+        while(temp->next!=NULL)
+        {
+            temp=temp->next;
+        }
+        temp->next=new_node;
+        new_node->prev=temp;
+        tail=new_node;
+    }
+}
+///////////////////////ADDING WORD AT TOP///////////////////////
+void add_at_top(node* &head ,node* &tail)
+{
+     string word5;
+    string mean5;
+    cout<<"ALERT! Use '_'For Spaces"<<endl;
+    cout<<"Enter Your Word"<<endl;
+    cin>>word5;
+    cout<<"Enter  The Meaning Of Your Word"<<endl;
+    cin>>mean5;
+     ///////CREATING A NEW NODE//////
+    node* temp=head;
+    node* new_node=new node;
+    new_node->word=word5;
+    new_node->mean=mean5;
+    new_node->next=head;
+    new_node->prev=NULL;
+     if(head!=NULL)
+        {
+        head->prev=new_node;
+        }
+    new_node->prev=NULL;
+    head=new_node;
+
+
+}
+////////////////////////TO SEARCH IN DICTIONARY/////////////////
+void search_in_dictionary(node*&head,node* &tail)
+{
+    node*temp = NULL;
+    int flag =1;
+    string word2;
+    cout<<"Enter The Word You Want To Search"<<endl;
+    cin>>word2;
+    while(temp->next!=NULL)
+    {
+        if(temp->word==word2)
+        {
+             cout<<"Oh Yeah We Got Your Word"<<endl;
+             cout<<temp->word<<"---"<<temp->mean<<endl;
+             flag = 0;
+             break;
+        }
+
+        temp=temp->next;
+
+
+    }
+    if (flag==1)
+    {
+    cout<<"Oops We Were Not Able TO Find!"<<endl;
+    }
+}
+///////////////////////DELETE WORD////////////////////////////
+void delete_word(node* &head, node* &tail)
+{
+    node* temp= head;
+    string word4;
+    cout<<"Enter A Word You Want To Delete"<<endl;
+    cin>>word4;
+    ////////WHEN WORD IS PRESENT AT FRONT//////
+    if(head->word==word4)
+    {
+        node*del_h=head;
+        head=head->next;
+        head->next->prev=NULL;
+        delete del_h;
+        return;
+    }
+    ////////WHEN WORD IS PRESENT AT END//////
+    else if(tail->word==word4)
+    {
+        node*del_last=tail;
+        node* store1=tail->prev;
+        tail->prev->next=NULL;
+        tail=store1;
+        delete del_last;
+    }
+    while(temp->next->word!=word4)
+    {
+        temp=temp->next;
+    }
+    node* store = temp;
+    node* to_del=temp->next;
+    temp->next=temp->next->next;
+    temp->next->next->prev=store;
+    delete to_del;
+}
+////////////////////SHOW DICTIONARY//////////////////////////
+void show_dictionary(node* &head,node* &tail)
+{
+    node* temp=head;
+    cout<<"Displaying Dictionary :"<<endl;
+    while(temp!=NULL)
+    {
+        cout<<temp->word<<"---"<<temp->mean<<endl;
+        temp=temp->next;
+    }
+}
+
+
+
+int main()
+{
+    ////////////////CODE RELATED FOR MAKING OF FILE////////////
+   // ofstream of_f;
+  //  ifstream if_f;
+  //  fstream f_f;
+
+
+   /* of_f.open("DICTIONARY.txt");
+    of_f<<"\nthis is my first text file\n";
+    of_f.close();*/
+
+    //////////////////////////END////////////////////////////////////
+    node*head=NULL;
+    node*tail=NULL;
+
+    ////////////////////MENU FOR DICTIONARY/////////////////////
+    int ch;
+    while(1)
+    {
+       // clrscr( ) ;
+        cout<< "\n\t\tDictionary"<<endl ;
+        cout<<"\n\t\t 1.Add A Word At Last." <<endl;
+        cout<<"\t\t 2.Search A Word."<<endl ;
+        cout<<"\t\t 3.Show Dictionary."<<endl ;
+        cout<<"\t\t 4.Delete A Word"<<endl;
+        cout<<"\n\t\t 5.Add A Word At Top." <<endl;
+        cout<<"\t\t 0.Exit."<<endl;
+        cout<< "\n\n\t\t Your Choice From 0 1 2 3"<<endl; ;
+       cin>>ch;
+       switch(ch)
+       {
+        case 1:
+           add_to_dictionary(head,tail);
+           break;
+       case 2 :
+            search_in_dictionary(head,tail);
+           break;
+       case 3 :
+            show_dictionary(head,tail);
+           break;
+       case 4 :
+           delete_word(head,tail);
+           break;
+       case 5:
+           add_at_top(head,tail);
+        break;
+        case 0:
+           break;
+       default:
+        cout<<"Wrong CHOICE Buddy!"<<endl;
+        break;
+        }
+        if(ch == 0)
+        {
+            cout<<"Thanks For Using Dictionary!"<<endl;
+            break;
+        }
+    }
+/////////////////////////////////MENU END//////////////////////
+
+    return 0;
+}
