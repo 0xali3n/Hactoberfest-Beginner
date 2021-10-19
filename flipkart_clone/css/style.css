@@ -1,0 +1,146 @@
+/* google fonts import  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+header{
+    height: 4vh;
+}
+nav{
+    background-color: #2874f0;
+    display: flex;
+    padding-top: 15px;   
+    font-family: 'Roboto', sans-serif;
+}
+
+nav img{
+    margin-left: 10vw;
+    width: 100px;
+    height: 30px;
+    object-fit: contain;
+    padding: 5px 0;
+}
+
+nav input{
+    height: 5.5vh;
+    width: 40vw;
+    margin-left: 15px;
+    padding-left: 15px;
+    padding: 0 16px;
+    border-radius: 2px ;
+    border: 0;
+    outline: 0 none;
+    font-size: 14px;  
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-p{
+    margin-left: 100px;
+}
+
+.inner-p{  
+    margin-left: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.account{
+    color: #2874f0;
+    font-weight: 500;
+    background-color: #fff;  
+    border-radius: 2px;   
+    padding: 5px 20px;
+    border: 1px solid #dbdbdb;
+}
+
+
+
+.main-top{
+    margin-left: 8vw;
+    margin-right: 8vw;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+   
+}
+.top-box{
+    width: 7vw;
+    margin-left: 30px;
+    font-family: 'Oswald', sans-serif;
+}
+.top-box p{
+    text-align: center;
+    padding: 5px;
+    margin-right: 10px;
+}
+.top-box img{
+    width: 70px;
+    height: 70px;
+}
+
+.main-items{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(227, 231, 231);
+    padding: 12px;
+  display: flex;
+}
+.single-item{
+  text-align: center;
+  margin: 9px;
+  font-family: 'Oswald', sans-serif;
+}
+.single-item p{
+    margin: 4px;
+}
+#price{
+    color: green;
+}
+
+footer{
+    background-color: #2874f0;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* height: 2vh; */
+}
+
+footer span{
+    color: rgb(14, 14, 124);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* media queries */
+
+@media only screen and (max-width: 1024px) {
+    nav{
+        display: block;
+    }
+  
+    .main-top{
+        margin-top: 150px;
+        margin-left: 5px;
+    }
+    .top-box{
+        margin: 25px;
+    }
+    .main-items{
+        overflow-x: scroll;
+    }
+}

@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,500&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+body
+{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+}
+.container
+{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+ul li
+{
+    list-style: none;
+}
+a
+{
+    font-size: 1rem;
+    text-decoration: none;
+    
+}
+p,li
+{
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.1em;
+}
+h1,h2,h3
+{
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
+.lg-heading
+{
+    font:30rem;
+}
+.md-heading
+{
+    font: 5rem;
+    
+}
+.text-red
+{
+    color:tomato;
+}
+.text-light
+{
+    color: whitesmoke;
+}
+.text-black
+{
+    color: #333;
+}
+.text-grey
+{
+    color: #555;
+}
+.text-teal
+{
+    color: teal;
+}
+html
+{
+    font-size: 62.5%;
+}
+.header
+{
+    height: 150vh;
+    position: relative;
+   /* rder: 2px solid b bolue; */
+   background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("t1.jpeg") ;
+   background-position: center;
+   background-size: cover;
+
+
+}
+.navbar
+{
+    /* border: 2px solid white; */
+    padding:1rem ;
+}
+.logo,.navbar a
+{
+    color: white;
+}
+.logo
+{
+    float: left;
+    font-size: 5rem;
+    
+}
+.nav-items
+{
+    float: right;
+    margin-top:2rem ;
+
+    /* font-size: smaller; */
+}
+
+.navbar::after
+{
+    content: '';
+    display: block;
+    clear: both;
+}
+.navbar a:visited
+{
+    color:whitesmoke;
+}
+.header .navbar .nav-item
+{
+    display: inline-block;
+    text-transform:uppercase ;
+    font-family: 'Varela Round', sans-serif;
+    /* font-size: small; */
+    color: #fbfcfd ;
+    padding:1rem 2.5rem;
+    background: transparent;
+    border:1px solid #fff;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0.5em;
+}
+.header-content
+{
+    position: absolute;
+    text-align: center;
+    /* border: 2px solid white; */
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0,2)) ;
+   
+}
+.header-content h1
+{
+    font-weight: 900;
+}
+.header-content p
+{
+    text-transform:uppercase ;
+}
+.button
+{
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0.5em;
+}
+.button-pri
+{
+    background-color: whitesmoke;
+    border-radius: 20px;
+    font-weight: 600;
+
+
+}
+.button-pri:hover, .button-sec:hover
+{
+    background-color: rgb(226, 223, 223);
+}
+.button-sec
+{
+    border-radius: 30px;
+    border: 2px solid tomato;
+    color: tomato;
+    font-weight: 600;
+    font-size: 15px;
+}
+/* #############showcase section styling######### */
+.showcase
+{
+    background: #ddd;
+    padding: 10rem 10rem 10rem 10rem;
+}
+.row
+{
+    height: 300px;
+    /* border: 3px solid black; */
+    background: white;
+    box-shadow: 0px 0px 20px 0px rgb(105, 104, 104);
+}
+.row1
+{
+    margin-bottom: 10rem;
+}
+.row1 .img-box, .row2 .text-box
+{
+    float:left;
+    width:50%;
+
+}
+.row2 .img-box, .row1 .text-box
+{
+    float:right;
+    width:50%;
+    
+}
+.row .img-box
+{
+    /* border: 2px solid green; */
+    height: 100%;
+}
+.row .text-box
+{
+    /* border: 2px solid rgb(228, 138, 4); */
+    height: 100%;
+    padding:3rem;
+}
+.row .img-box img
+{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.row .text-box p
+{
+    font-size: 1.5rem;
+}
+.row .text-box h2
+{
+    font-size: 30px;
+}
+.row::after
+{
+    content:'' ;
+    display: block;
+    clear:both;
+}
+/* #############features section ########### */
+.features
+{
+    padding: 10rem 0;
+}
+.box-wrap
+{
+    /* border: 2px solid green; */
+    box-shadow:0px 0px 20px 0px rgb(105, 104, 104);
+}
+.box{
+    width:33.333%;
+    float: left;
+    /* border: 2px solid black; */
+    padding: 2rem;
+    text-align: center;
+}
+.box-wrap::after
+{
+    content:'';
+    display: block;
+    clear: both;
+}
+.box1, .box3
+{
+    background-color: rgba(0, 92, 92, 0.932);
+    color: white;
+}
+.box2
+{
+    background-color: tomato;
+    color: white;
+}
+/* ################footer styling#################### */
+.footer
+{
+    background-color: rgba(0, 92, 92, 0.932);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+.social-media-links i
+{
+    margin: 1rem ;
+}

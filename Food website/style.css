@@ -1,0 +1,226 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lusitana", serif;
+}
+#logo img {
+  height: 70px;
+  margin: 10px 30px;
+  border-radius: 100%;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+}
+
+#navbar::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+#navbar ul {
+  display: flex;
+}
+
+#navbar ul li {
+  list-style: none;
+  margin: 22px;
+  font-size: 1.5rem;
+}
+#navbar ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a:active {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/* Home text */
+#home:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 76%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  background-color: green;
+}
+
+#home {
+  display: flex;
+  /* background-color: white; */
+  flex-direction: column;
+  border: 2px solid red;
+  padding: 38px 200px;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+#home h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: rgb(190, 20, 20);
+  padding: 10px;
+  text-align: center;
+}
+
+#home p {
+  color: rgb(52, 22, 121);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 3px solid white;
+  background-color: maroon;
+  color: white;
+  margin: 20px;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#services-container {
+  /* margin-top: 120px; */
+  background: rgba(248, 197, 131, 0.4);
+  padding: 10px;
+  /* border: 2px solid blue; */
+  /* margin-top: 120px; */
+}
+#services {
+  display: flex;
+}
+#services-container h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  padding: 20px;
+}
+
+#services .box {
+  border: 2px solid red;
+  border-radius: 20px;
+  width: 30%;
+  margin: 20px;
+  padding: 20px;
+  background: rgba(164, 241, 241, 0.3);
+}
+
+.box img {
+  height: 200px;
+  width: 90%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 30px;
+}
+.box h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 5px;
+}
+.box p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 10px;
+}
+
+#partners-container ::before {
+  background: url("photos/pizza_back.jpg") no-repeat center center/cover;
+  opacity: 0.3;
+  content: "";
+  position: absolute;
+  top: 1305px;
+  left: 0px;
+  height: 278px;
+  width: 100%;
+  z-index: -1;
+}
+#partners-container .box {
+  display: flex;
+}
+
+#partners-container h1 {
+  text-align: center;
+  color: maroon;
+  text-shadow: 3px 3px white;
+  font-size: 2.6rem;
+  padding: 20px;
+}
+
+#partners-container .box img {
+  height: 120px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: 22px;
+  z-index: -1;
+  opacity: 0.5;
+  background: url("photos/contact_back.jpg") no-repeat center center/cover;
+}
+
+#contact-box {
+  display: flex;
+  padding: 10px;
+  /* padding-bottom: 34px; */
+  /* margin-top:30px; */
+  margin-left: 100px;
+  /* border:2px solid red; */
+}
+
+#contact h1 {
+  position: relative;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px white;
+  padding-top: 50px;
+  margin-left: 200px;
+}
+
+#contact-box input,
+#contact-box textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.3rem;
+  border: none;
+  border-radius: 9px;
+  font-size: 1.1rem;
+}
+
+#contact-box label {
+  font-size: 1.5rem;
+  padding: 10px;
+}

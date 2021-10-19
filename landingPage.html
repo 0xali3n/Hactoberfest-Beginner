@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free code camp landing page</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
   <style>
   /** global element styling **/
 
@@ -26,6 +31,12 @@ body {
 #page-wrapper {
   position: relative;
 }
+
+.heading{
+    margin-top: 20px;
+    font-size: 40px;
+}
+
 
 li {
   list-style: none;
@@ -54,6 +65,18 @@ a {
   border-radius: 2px;
   background: transparent;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+#email{
+    outline: none;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.btn:hover{
+    transform: scale(1.05);
 }
 
 .grid {
@@ -68,7 +91,10 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #eee;
+  background-color: white;
+  width: 100%;
+
+
 }
 
 @media (max-width: 600px) {
@@ -346,9 +372,9 @@ footer > span {
         <div class="container"></div>
 
         <section id="hero">
-            <h2>Handcrafted, home-made masterpieces</h2>
+            <h2 class="heading">Handcrafted, home-made masterpieces</h2>
             <form id="form" action="https://www.freecodecamp.com/email-submit">
-                <input name="email" id="email" type="email" placeholder="Enter your email address" required />
+
                 <input id="submit" type="submit" value="Get Started" class="btn" />
             </form>
         </section>
@@ -438,7 +464,11 @@ footer > span {
             </footer>
         </div>
     </div>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

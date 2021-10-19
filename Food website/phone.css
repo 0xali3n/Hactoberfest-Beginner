@@ -1,0 +1,46 @@
+body{
+    font-family: 'Lusitana', serif;
+}
+
+#logo img{
+    height: 70px;
+    margin: 10px;
+    border-radius: 100%;
+}
+
+#navbar{
+    display:flex;
+    flex-direction: column;
+}
+
+#navbar ul li a{
+    font-size: 1rem;
+    padding: 3px;
+}
+
+#navbar ul li a:hover, #navbar ul li a:active {
+    font-size: 1rem;
+    padding: 5px;
+}
+
+#home:before{
+    background: url('photos/back.jpg') no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    padding: 220px 40px;
+    width:50%;
+    justify-content: center;
+    align-items: center;
+}
