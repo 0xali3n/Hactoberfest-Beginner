@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="https://use.fontawesome.com/c814bb182d.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Rock-Paper-Scissors</title>
+</head>
+
+<body>
+    <header>
+        <h1>Let's settle this like Adults ;)</h1>
+    </header>
+    <div class="score-board">
+        <div class="badge" id="user-label">user</div>
+        <div class="badge" id="score-label">comp</div>
+        <span id="user-score">0</span>:
+        <span id="computer-score">0</span>
+    </div>
+
+    <div class="result">
+        <p><b>Try your luck</b></p>
+    </div>
+
+    <div class="choices">
+        <div class="choice" id="r">
+            <img src="rock1.jpg" width="150" height="150" alt="rock" />
+        </div>
+
+        <div class="choice" id="p">
+            <img src="paper.png" width="150" height="150" alt="paper" />
+        </div>
+
+        <div class="choice" id="s">
+            <img src="scissors1.jpg" width="150" height="150" alt="scissors" />
+        </div>
+    </div>
+    <p id="action-msg">Make your Move</p>
+
+    <footer>
+        <div class="hide">
+            <div class="alag" id="win">
+                <img src="win.gif" width="200" height="200" />
+            </div>
+            <div class="alag" id="lose">
+                <img src="sad.gif" width="200" height="200" />
+            </div>
+            <div class="alag" id="draw">
+                <img src="draw.gif" width="200" height="200" />
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <p id="me">Made with ❤ by Kriti</p>
+</body>
+
+</html>
