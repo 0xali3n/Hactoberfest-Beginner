@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(orange, rgb(196, 83, 35));
+}
+.box {
+  display: flex;
+}
+.box .eye {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: block;
+  background: whitesmoke;
+  margin: 0 20px;
+  border-radius: 50%;
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.5), inset 0 0 15px orange,
+    inset 0 0 25px orange;
+}
+.box .eye::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translate(-50%, -50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgb(53, 12, 12);
+  border: 7px solid black;
+  box-sizing: border-box;
+}
