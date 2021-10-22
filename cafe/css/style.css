@@ -1,0 +1,260 @@
+/* CSS reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Css variable */
+:root{
+    --navbar-height: 59px;
+}
+/* Navigation bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    top: 0px;
+    background-color: rgb(32, 28, 28);
+}
+/* Navbar: logo */
+#logo{
+    margin: 15px;
+
+}
+
+#logo img{
+    height: 50px;
+    margin: 3px 13px;
+}
+/* As we studied psuedo selector */
+#navbar::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 16%;
+    width: 100%;
+    background-color: black;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#navbar ul{
+    display: flex;
+    font-family: 'Aladin', cursive;
+
+}
+#navbar ul li{ 
+         list-style: none;
+         font-size: 1rem;
+         
+}
+#navbar ul li a{ 
+         display: block;
+         border-radius: 4px;
+         text-decoration: none;
+         padding: 3px 22px;
+         color: white;
+         font-size: 20px;
+         
+}
+#navbar ul li a:hover{ 
+         color: white;
+         border-radius: 14px;
+         background-color: black;
+}
+/* Home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 512px;
+    justify-content: center;
+    align-items: center;
+
+}
+#home::before{
+    content: "";
+    height: 609px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    /* background-color: tomato; */
+    background: url('../image/fvs.png')no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.90;
+    /* To fit the content*/
+    position: absolute;
+    }
+
+    #home h1{
+        color: white;
+        text-align: center;
+        font-family: 'Berkshire Swash', cursive;
+    }
+    #home p{
+        color: white;
+        text-align: center;
+        font-size: 1.1rem;
+        font-family: Arial, Helvetica, sans-serif
+    }
+    
+    /* Utility classes */
+    .h-primary {
+        font-size: 3.8rem;
+        
+        padding: 12px;
+        /* font-family: 'Berkshire Swash', cursive; */
+        font-family: 'Texturina', serif;
+    }
+    .h1-primary{
+        font-size: 2rem;
+        text-align: center;
+        font-family: 'Berkshire Swash', cursive;
+    }
+    
+}
+.h-secondary{
+    padding: 12px;
+    font-size: 1.2rem;
+    font-family: 'Berkshire Swash', cursive;
+    
+
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(196 202 218);
+    margin: 17px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}
+.btn:hover{
+    background-color: wheat;
+    font-weight: bold;
+    
+}
+.center{
+    text-align: center;
+    padding-top: 11px;
+
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+/* Services section */
+#services-conatiner::before{
+    content: "";
+    position: absolute;
+    background: url('../image/menu.jpg')no-repeat center center/cover;
+    height: 543px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.78;
+    
+}
+
+ #services{
+     margin: 34px;
+     display: flex;
+
+ }
+ 
+ 
+ #services .box{
+    margin-left: 190px;
+     border: 2px solid brown;
+     padding: 36px;
+     background-color: #6f4940;
+     border-radius: 23px;
+     margin: 19px 15px;
+     height: 320px;
+     box-shadow: 5px -7px 8px 3px grey;
+ }
+ #services .box img{
+     height: 140px;
+     display: block;
+     margin: auto;
+
+     border: 2px solid brown;
+ }
+ #services .box p{
+    font-family: 'Berkshire Swash', cursive;
+ }
+
+/* Clients section */
+    /* #client-section{
+        height: 422px;
+        
+
+    } */
+    #client-section::before{
+        content: "";
+        position: absolute;
+        background: url('../image/jfas.jpg')no-repeat center center/cover;
+        height: 380px;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.6;
+    }
+    
+    #client{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Contact Section */
+    #contact{
+        position: relative;
+    }
+    #contact::before{
+        content: "";
+        position: absolute;
+        background: url('../image/h.jpg')no-repeat center center/cover;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.78;
+        
+    }
+    #contact-box input,
+    #contact-box textarea{
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+
+    }
+    #contact-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 35px;
+    }
+    #contact-box form{
+        width: 40%;
+        
+    }
+    #contact-box label{
+        font-size: 1.3rem;
+        font-family: 'Berkshire Swash', cursive;
+    }
+    #client p{
+        color: black;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-bottom: 30px;
+    }
+    .para3{
+        justify-content: center;
+        text-align: center;
+        margin-top: 15px;
+        padding-left: 30px;
+        font-size: 23px
+    }
+    
