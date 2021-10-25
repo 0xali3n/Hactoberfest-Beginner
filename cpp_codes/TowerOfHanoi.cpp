@@ -1,19 +1,32 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+
 using namespace std;
-void towerofhanoi(int n,char frm, char to, char usng )
-{
-    if (n==1)
-    {
-        cout<<"Move 1 from "<<frm<<"  to "<<to<<"\n";
-        return ;
+
+void toh(int n, int from, int to, int aux, long long &moves);
+
+int main() {
+
+    int T;
+    cin >> T;
+    while (T--) {
+        long long moves = 0;
+        int N;
+        cin >> N;
+        toh(N, 1, 3, 2, moves);
+        cout << moves << endl;
     }
-    towerofhanoi(n-1, frm, usng , to );
-    cout<<"Move "<<n<<" from "<<frm<<" to  "<<to<<"\n";
-    towerofhanoi(n-1, usng, to,frm);
+    return 0;
 }
-int main()
-{
-    int n=6 ;
-    towerofhanoi(n,'A','C','B') ;
+
+
+
+void toh(int N, int from, int to, int aux, long long &moves) {
+    if(N!=0){
+        moves++;
+    toh(N-1,from,aux,to,moves);
+    cout<<"move disk"<<" "<<N<<" "<<"from rod"<<" "<<from<<" "<<"to rod"<<" "<<to<<" "<<endl;
+    toh(N-1,aux,to,from,moves);
+    }
+    
+   
 }
- 
