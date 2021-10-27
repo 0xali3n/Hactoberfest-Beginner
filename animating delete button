@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inter:400,500,600,700&amp;display=swap'>
+<style>
+.button {
+  --background: #275EFE;
+  --background-hover: #1D4FE1;
+  --text: #fff;
+  --icon: #fff;
+  display: -webkit-box;
+  display: flex;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  padding: 9px 20px 9px 12px;
+  border-radius: 11px;
+  line-height: 24px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  overflow: hidden;
+  color: var(--text);
+  background: var(--b, var(--background));
+  -webkit-transition: background .4s, -webkit-transform .3s;
+  transition: background .4s, -webkit-transform .3s;
+  transition: transform .3s, background .4s;
+  transition: transform .3s, background .4s, -webkit-transform .3s;
+  -webkit-transform: scale(var(--scale, 1)) translateZ(0);
+          transform: scale(var(--scale, 1)) translateZ(0);
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+.button:active {
+  --scale: .95;
+}
+.button:hover {
+  --b: var(--background-hover);
+}
+.button .icon,
+.button .text {
+  display: inline-block;
+  vertical-align: top;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+.button .icon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 1;
+  margin-right: 8px;
+  color: var(--text);
+}
+.button .icon svg {
+  width: 96px;
+  height: 96px;
+  display: block;
+  position: absolute;
+  left: -36px;
+  top: -36px;
+  will-change: transform;
+  fill: var(--icon);
+  -webkit-transform: scale(0.25) translateZ(0);
+          transform: scale(0.25) translateZ(0);
+  -webkit-animation: var(--name, var(--name-top, none)) 2400ms ease forwards;
+          animation: var(--name, var(--name-top, none)) 2400ms ease forwards;
+}
+.button .icon svg.bottom {
+  --name: var(--name-bottom, none);
+}
+.button .text {
+  -webkit-animation: var(--name-text, none) 2400ms ease forwards;
+          animation: var(--name-text, none) 2400ms ease forwards;
+}
+.button .text span {
+  display: inline-block;
+  vertical-align: top;
+  opacity: var(--span-o, 1);
+  -webkit-transform: translate(var(--span-x, 0), var(--span-y, 0)) rotate(var(--span-r, 0deg)) translateZ(0);
+          transform: translate(var(--span-x, 0), var(--span-y, 0)) rotate(var(--span-r, 0deg)) translateZ(0);
+  -webkit-transition: opacity 0.2s linear var(--span-o-d, 0.3s), -webkit-transform 0.3s ease var(--span-d, 0s);
+  transition: opacity 0.2s linear var(--span-o-d, 0.3s), -webkit-transform 0.3s ease var(--span-d, 0s);
+  transition: transform 0.3s ease var(--span-d, 0s), opacity 0.2s linear var(--span-o-d, 0.3s);
+  transition: transform 0.3s ease var(--span-d, 0s), opacity 0.2s linear var(--span-o-d, 0.3s), -webkit-transform 0.3s ease var(--span-d, 0s);
+}
+.button .text span:nth-child(1) {
+  --span-delay: 0.4s;
+  --span-o-d: 0.325s;
+}
+.button .text span:nth-child(2) {
+  --span-delay: 0.45s;
+  --span-o-d: 0.35s;
+}
+.button .text span:nth-child(3) {
+  --span-delay: 0.5s;
+  --span-o-d: 0.375s;
+}
+.button .text span:nth-child(4) {
+  --span-delay: 0.55s;
+  --span-o-d: 0.4s;
+}
+.button .text span:nth-child(5) {
+  --span-delay: 0.6s;
+  --span-o-d: 0.425s;
+}
+.button .text span:nth-child(6) {
+  --span-delay: 0.65s;
+  --span-o-d: 0.45s;
+}
+.button .text span:nth-child(7) {
+  --span-delay: 0.7s;
+  --span-o-d: 0.475s;
+}
+.button .text span:nth-child(8) {
+  --span-delay: 0.75s;
+  --span-o-d: 0.5s;
+}
+.button .text span:nth-child(9) {
+  --span-delay: 0.8s;
+  --span-o-d: 0.525s;
+}
+.button .text span:nth-child(10) {
+  --span-delay: 0.85s;
+  --span-o-d: 0.55s;
+}
+.button .text span:nth-child(11) {
+  --span-delay: 0.9s;
+  --span-o-d: 0.575s;
+}
+.button.delete {
+  --name-top: trash-top;
+  --name-bottom: trash-bottom;
+  --name-text: text;
+  --span-x: -8px;
+  --span-y: 8px;
+  --span-r: -40deg;
+  --span-o: 0;
+}
+.button.delete .text span {
+  --span-o-d: 1s;
+  --span-d: var(--span-delay);
+}
+
+@-webkit-keyframes trash-bottom {
+  25%,
+    32% {
+    -webkit-transform: translate(32px, 19px) scale(1) translateZ(0);
+            transform: translate(32px, 19px) scale(1) translateZ(0);
+  }
+  70%,
+    80% {
+    -webkit-transform: translate(32px, 0) scale(0.25) translateZ(0);
+            transform: translate(32px, 0) scale(0.25) translateZ(0);
+  }
+  90% {
+    -webkit-transform: translateX(-2px) scale(0.25) translateZ(0);
+            transform: translateX(-2px) scale(0.25) translateZ(0);
+  }
+  100% {
+    -webkit-transform: scale(0.25) translateZ(0);
+            transform: scale(0.25) translateZ(0);
+  }
+}
+
+@keyframes trash-bottom {
+  25%,
+    32% {
+    -webkit-transform: translate(32px, 19px) scale(1) translateZ(0);
+            transform: translate(32px, 19px) scale(1) translateZ(0);
+  }
+  70%,
+    80% {
+    -webkit-transform: translate(32px, 0) scale(0.25) translateZ(0);
+            transform: translate(32px, 0) scale(0.25) translateZ(0);
+  }
+  90% {
+    -webkit-transform: translateX(-2px) scale(0.25) translateZ(0);
+            transform: translateX(-2px) scale(0.25) translateZ(0);
+  }
+  100% {
+    -webkit-transform: scale(0.25) translateZ(0);
+            transform: scale(0.25) translateZ(0);
+  }
+}
+@-webkit-keyframes trash-top {
+  25%,
+    32% {
+    -webkit-transform: translate(38px, 4px) scale(1) rotate(-20deg) translateZ(0);
+            transform: translate(38px, 4px) scale(1) rotate(-20deg) translateZ(0);
+  }
+  70%,
+    80% {
+    -webkit-transform: translate(32px, 0) scale(0.25) translateZ(0);
+            transform: translate(32px, 0) scale(0.25) translateZ(0);
+  }
+  90% {
+    -webkit-transform: translateX(-2px) scale(0.25) translateZ(0);
+            transform: translateX(-2px) scale(0.25) translateZ(0);
+  }
+  100% {
+    -webkit-transform: scale(0.25) translateZ(0);
+            transform: scale(0.25) translateZ(0);
+  }
+}
+@keyframes trash-top {
+  25%,
+    32% {
+    -webkit-transform: translate(38px, 4px) scale(1) rotate(-20deg) translateZ(0);
+            transform: translate(38px, 4px) scale(1) rotate(-20deg) translateZ(0);
+  }
+  70%,
+    80% {
+    -webkit-transform: translate(32px, 0) scale(0.25) translateZ(0);
+            transform: translate(32px, 0) scale(0.25) translateZ(0);
+  }
+  90% {
+    -webkit-transform: translateX(-2px) scale(0.25) translateZ(0);
+            transform: translateX(-2px) scale(0.25) translateZ(0);
+  }
+  100% {
+    -webkit-transform: scale(0.25) translateZ(0);
+            transform: scale(0.25) translateZ(0);
+  }
+}
+@-webkit-keyframes text {
+  25% {
+    -webkit-transform: translate(-4px, -6px) rotate(-20deg) translateZ(0);
+            transform: translate(-4px, -6px) rotate(-20deg) translateZ(0);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translate(-12px, 48px) rotate(-80deg) scale(0.2) translateZ(0);
+            transform: translate(-12px, 48px) rotate(-80deg) scale(0.2) translateZ(0);
+  }
+  71% {
+    opacity: 0;
+  }
+  72%,
+    90% {
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes text {
+  25% {
+    -webkit-transform: translate(-4px, -6px) rotate(-20deg) translateZ(0);
+            transform: translate(-4px, -6px) rotate(-20deg) translateZ(0);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translate(-12px, 48px) rotate(-80deg) scale(0.2) translateZ(0);
+            transform: translate(-12px, 48px) rotate(-80deg) scale(0.2) translateZ(0);
+  }
+  71% {
+    opacity: 0;
+  }
+  72%,
+    90% {
+    opacity: 0;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  font-family: 'Inter', Arial;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  background: #F6F8FF;
+}
+body .dribbble {
+  position: fixed;
+  display: block;
+  right: 20px;
+  bottom: 20px;
+}
+body .dribbble img {
+  display: block;
+  height: 28px;
+}
+body .twitter {
+  position: fixed;
+  display: block;
+  right: 64px;
+  bottom: 14px;
+}
+body .twitter svg {
+  width: 32px;
+  height: 32px;
+  fill: #1da1f2;
+}
+</style>
+
+<button class="button">
+<div class="icon">
+<svg class="top">
+<use xlink:href="#top">
+</svg>
+<svg class="bottom">
+<use xlink:href="#bottom">
+</svg>
+</div>
+<div class="text">Delete</div>
+</button>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="top">
+<path d="M15,3.75 C15.5522847,3.75 16,4.19771525 16,4.75 L16,5.75 L18.25,5.75 C18.6642136,5.75 19,6.08578644 19,6.5 C19,6.91421356 18.6642136,7.25 18.25,7.25 L5.75,7.25 C5.33578644,7.25 5,6.91421356 5,6.5 C5,6.08578644 5.33578644,5.75 5.75,5.75 L8,5.75 L8,4.75 C8,4.19771525 8.44771525,3.75 9,3.75 L15,3.75 Z M14,5 L10,5 C9.72385763,5 9.5,5.22385763 9.5,5.5 C9.5,5.74545989 9.67687516,5.94960837 9.91012437,5.99194433 L10,6 L14,6 C14.2761424,6 14.5,5.77614237 14.5,5.5 C14.5,5.25454011 14.3231248,5.05039163 14.0898756,5.00805567 L14,5 Z"></path>
+</symbol>
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="bottom">
+<path d="M7.02498527,8.25 L16.9751371,8.25 C17.5411532,8.25 18,8.69771525 18,9.25 C18,9.2951932 17.9968602,9.34033442 17.9906022,9.3851132 L16.6878729,18.7066989 C16.6389095,19.0569074 16.4041276,19.3558931 16.0703039,19.4931212 C14.8428392,19.9977071 13.4860916,20.25 12.0000612,20.25 C10.5140229,20.25 9.1572688,19.9977044 7.92979891,19.4931132 C7.59597391,19.3558774 7.36118974,19.0568881 7.31224574,18.7066728 L6.00952014,9.3851132 C5.93304388,8.83789281 6.32568685,8.33379079 6.88651275,8.25916983 C6.93240487,8.25306363 6.97866843,8.25 7.02498527,8.25 Z"></path>
+</symbol>
+</svg>
+
+<script id="rendered-js">
+document.querySelectorAll('.button').forEach(button => {
+  let text = button.querySelector('.text');
+  text.innerHTML = '<span>' + text.textContent.trim().split('').join('</span><span>') + '</span>';
+  button.addEventListener('click', e => {
+    if (!button.classList.contains('delete')) {
+
+      button.classList.add('delete');
+
+      setTimeout(() => button.classList.remove('delete'), 2400);
+
+    }
+    e.preventDefault();
+  });
+});
+</script><a target="_blank" href="https://www.htmlbestcodes.com/" style="font-size: 8pt; text-decoration: none;font-family:Tahoma">HTML Best Codes</a>
