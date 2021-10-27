@@ -25,7 +25,7 @@ Hacktoberfest, in its 8th year, is a month-long celebration of open source softw
 ## How Does it Work?
 Hacktoberfest is open to everyone in our global community!
 - Maintainers determine if their open-source projects participate.
-- Quality pull requests submitted on GitHub and GitLab are rewarded.
+- Four Successful pull requests submitted on GitHub and GitLab are rewarded.
 - Engaged maintenance of Hacktoberfest tagged repositories are rewarded.
 
 
