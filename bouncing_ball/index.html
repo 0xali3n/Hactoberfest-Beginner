@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .Bcontainer{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #ball1{
+            background-color: rgb(92, 219, 145);
+            border: 1px solid white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: bouncing 1s ease-out 0s infinite alternate;
+            box-shadow: 0px 3px 5px 2px white;
+        }
+        #ball2{
+            background-color: hotpink;
+            border: 1px solid white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: bouncing 1s ease-out 0.6s infinite alternate;
+            box-shadow: 0px 3px 5px 2px white;
+        }
+        #ball3{
+            background-color: teal;
+            border: 1px solid white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: bouncing 1s ease-out 0.4s infinite alternate;
+            box-shadow: 0px 3px 5px 2px white;
+        }
+        #ball4{
+            background-color: coral;
+            border: 1px solid white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: bouncing 1s ease-out 0.8s infinite alternate;
+            box-shadow: 0px 3px 5px 2px white;
+        }
+        #ball5{
+            background-color: paleturquoise;
+            border: 1px solid white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: bouncing 1s ease-out 0.2s infinite alternate;
+            box-shadow: 0px 3px 5px 2px white;
+        }
+        #line{
+            border: 2px solid white;
+            border-width: 4px 220px 4px;
+        }
+        @keyframes bouncing{
+            0%{transform: translateY(0)}
+            100%{transform: translateY(-200px)}
+            /* 0%{transform: translateY(0)} */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Bcontainer">
+            <div class="ball" id="ball1"></div>
+            <div class="ball" id="ball2"></div>
+            <div class="ball" id="ball3"></div>
+            <div class="ball" id="ball4"></div>
+            <div class="ball" id="ball5"></div>
+        </div>
+        <div id="line"></div>
+    </div>
+</body>
+</html>
