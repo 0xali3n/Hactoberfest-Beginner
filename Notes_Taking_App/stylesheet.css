@@ -1,0 +1,23 @@
+body{
+    background-color: rgba(101,108,133,0.8);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:100px;
+    background-color: rgba(101,108,133,0.8);
+}
+#clock{
+    font: bold 24pt sans;
+    background: #ddf;
+    font-size: 100px;
+    padding: 50px;
+    /* background-color: rgb(9, 211, 172); */
+    color: rgb(9, 211, 172);
+    margin: 100px;
+    border-radius: 20px;
+    border: 2px solid rgb(9, 211, 172);
+    font-family: sans-serif;
+}
