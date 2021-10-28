@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;background-color: rgb(1, 1, 20);
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 12%;
+        }
+        .in_containers{
+            width: 200px;
+            height: 170px;
+            border: 0px solid white; 
+            border-radius: 3px;
+            text-align: center;
+            font-size: 96px;
+            /* font-weight: bold; */
+            margin-left: 20px;
+            padding: 40px;
+            color: white;
+            /* text-shadow: 2px 2px 5px white; */
+        }
+        #first , #second{
+            background-color: rgb(0, 89, 255);
+            /* box-shadow: 0px 270px 10px rgba(0, 89, 255, 0.842); */
+            /* text-shadow: 0px 270px 15px white; */
+        }
+        #third {
+            background-color: rgb(252, 49, 49);
+            /* box-shadow: 0px 270px 10px rgba(252, 49, 49, 0.849); */
+            /* text-shadow: 0px 270px 15px white; */
+        }
+        .num_text{
+            border: 0px solid none;
+            display: flex;
+            flex-direction: column;
+            -webkit-box-reflect: below 1px linear-gradient(transparent,#0003);
+        }
+        .blue_t{
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-left: 20px;
+            background-color: rgb(3, 60, 167);
+            width: inherit;
+            font-size: 26px;
+            /* box-shadow: 0px 50px 10px rgba(3, 60, 167, 0.863); */
+            /* text-shadow: 0px 0px 8px white; */
+        }
+        .red_t{
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-left: 20px;
+            background-color: rgb(255, 0, 0);
+            width: inherit;
+            font-size: 26px;
+            /* box-shadow: 0px 50px 10px rgba(253, 30, 30, 0.863); */
+            /* text-shadow: 0px 0px 8px white; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="num_text">
+        <div class="in_containers" id="first">hour</div>
+        <p class="blue_t">HOURS</p>
+        </div>
+        <div class="num_text">
+        <div class="in_containers" id="second">minute</div>
+        <p class="blue_t">MINUTES</p>
+        </div>
+        <div class="num_text"> 
+        <div class="in_containers" id="third">second</div>
+        <P class="red_t">SECONDS</P>
+        </div>
+    </div>
+    <script>
+        current_date= new Date();
+        console.log(current_date);
+        var a=document.getElementsByClassName("in_containers");
+        a[0].innerHTML = (current_date.getHours());
+        a[1].innerHTML = (current_date.getMinutes());
+        a[2].innerHTML = (current_date.getSeconds());
+        setInterval(() => {
+            a[2].innerHTML = (new Date().getSeconds());
+            if(new Date().getSeconds()<10){
+                a[2].innerHTML = "0"+(new Date().getSeconds());
+            }
+            a[1].innerHTML = (new Date().getMinutes());
+            if(new Date().getMinutes()<10){
+                a[1].innerHTML = "0"+(new Date().getMinutes());
+            }
+            a[0].innerHTML = (new Date().getHours());
+            if(new Date().getHours()<10){
+                a[0].innerHTML = "0"+(new Date().getHours());
+            }
+        } ,1000);
+        // let a;
+        // let date;
+        // setInterval(() => {
+        //     a=new Date().getHours();
+        //     a[3].innerHTML = (a.toLocaleString("en-US",{timeZone:'Europe/London',timeStyle:'medium',hourCycle:'h24'}));
+        // } ,1000);
+
+        //london time
+        // setInterval(() => {
+            // a[3].innerHTML = (new Date().toLocaleString("en-US",{timeZone:'Europe/London',timeStyle:'medium',hourCycle:'h24'}));
+        //     a[3].innerHTML = (new Date().toLocaleString("en-US",{timeZone:'Europe/London',timeStyle:'medium',hourCycle:'h24'}));
+        // } ,1000);
+        // console.log((new Date().toLocaleString("en-US",{timeZone:'Europe/London',timeStyle:'medium',hourCycle:'h24'})));
+        
+    </script>
+</body>
+</html>
