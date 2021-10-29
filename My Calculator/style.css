@@ -1,0 +1,86 @@
+
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	border-radius: 5px;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #2b2d42;
+}
+.calculator {
+	position: relative;
+	display: grid;
+}
+.calculator .value {
+	grid-column: span 4;
+	width: 244px;
+	height: 100px;
+	text-align: right;
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 18px;
+}
+.calculator span {
+	display: grid;
+	width: 60px;
+	height: 60px;
+	color: #fff;
+	background: #363953;
+	place-items: canter;
+	align-items: center;
+	text-align: center;
+	border: 1px solid rgba(0, 0, 0, .1);
+	cursor: pointer;
+}
+.calculator span:hover {
+	background-color: #33364E;
+}
+.calculator span:active {
+	background: #3b5196;
+	color: #fff;
+}
+.calculator span.clear {
+	grid-column: span 2;
+	width: 120px;
+	background: #f2685c;
+}
+.calculator span.plus {
+	grid-row: span 2;
+	height: 120px;
+}
+.calculator span.equal {
+	background: #d79a57;
+}
+.me {
+  margin:25px;
+}
+.me a {
+  font-size:15px;
+  color: #000;
+  font-weight: 400;
+  text-decoration: none;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+.me a:hover {
+  color: #fff;
+  background: #18191F;
+  transition: all easy 0.3s;
+}
+
+
+
+
+
+
+
