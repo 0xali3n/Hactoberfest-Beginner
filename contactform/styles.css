@@ -1,0 +1,60 @@
+h1 {
+    text-align: center;
+    color: black;
+    font-size: 60px;
+    margin-top: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    
+}
+.container {
+    width: 200px;
+    font-size: 30px;
+    margin: 100px auto;
+    width: 250px;
+    align-items: center;
+}
+input[type=submit] {
+    position: relative;
+    padding: 10px;
+    background-color: white;
+    font-size: 25px;
+    color: orange;
+    border-radius: 10px; 
+    width: auto;
+    text-align: center;  
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.form-control {
+    width: 500px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid grey;
+    color: brown;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-style: oblique;
+    letter-spacing: 2px;
+    position: relative;
+    text-transform: uppercase;
+    
+}
+body {
+    margin: 0;
+    padding: 0;
+      background-image: url("pic2.jpg"); 
+     /* background-image: linear-gradient(to top right, #490665,#6a1067,#880579, #e514a3, #e23bbf,#f96dea);  */
+    text-align: center;
+    background-position: center;
+}
+input[type=submit]:hover {
+    color: blueviolet;
+    cursor: pointer;
+}
+::placeholder {
+    color: brown;
+}
