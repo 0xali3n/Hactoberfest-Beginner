@@ -1,0 +1,17 @@
+{
+  "name": "Lecture_33",
+  "version": "1.0.0",
+  "description": "",
+  "main": "HackerrankAutomation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.5",
+    "puppeteer": "^10.4.0",
+    "puppeteer-core": "^10.4.0"
+  }
+}
