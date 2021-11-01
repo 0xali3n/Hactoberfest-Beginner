@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<title>Animated Clock</title>
+	<style type="text/css">
+		body {
+			font-size: 1em;
+			font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+		}
+		
+		#theClock {
+			position: relative;
+			width: 670px; /* 700 effective size */
+			height: 670px;
+			margin: 0 auto;
+			background-image: -moz-linear-gradient(top, #62c462, #51a351);
+			background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+			background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+			background-image: -o-linear-gradient(top, #62c462, #51a351);
+			background-image: linear-gradient(to bottom, #62c462, #51a351);
+			background-repeat: repeat-x;
+			border-radius: 50%;
+			text-align: center;
+			padding: 15px;
+		}
+		
+		.circle {
+			position: relative;
+			background: white;
+			border-radius: 50%
+		}
+		
+		.body {
+			width: 670px;
+			height: 670px;
+			background-color: #006dcc;
+			*background-color: #0044cc;
+			background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+			background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+			background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+			background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+			background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+		}
+		
+		.dot {
+			position: absolute;
+			top: 335px;
+			left: 335px; 
+			width: 30px;
+			height: 30px;
+
+background-color: #da4f49;
+*background-color: #bd362f;
+background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+background-image: linear-gradient(to bottom, #ee5f5b, #bd362f);
+background-repeat: repeat-x;
+		}
+		
+		.hand {
+			position: absolute;
+background-color: #faa732;
+*background-color: #f89406;
+background-image: -moz-linear-gradient(top, #fbb450, #f89406);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
+background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
+background-image: -o-linear-gradient(top, #fbb450, #f89406);
+background-image: linear-gradient(to bottom, #fbb450, #f89406);
+			border-radius: 50px;
+			
+			/* set the offsets */
+			transform-origin:50% 100%;
+			-ms-transform-origin:50% 100%; /* IE 9 */
+			-webkit-transform-origin:50% 100%; /* Safari and Chrome */
+			-moz-transform-origin:50% 100%; /* Firefox */
+			-o-transform-origin:50% 100%; /* Opera */
+		}
+		
+		.hour {
+			width: 10px;
+			height: 290px;
+			top: 60px;
+			left: 345px;
+			line-height: 1px;
+			display: block;
+		}
+		
+		.minute {
+			width: 8px;
+			height: 330px;
+			top: 20px;
+			left: 346px;
+			line-height: 1px;
+			display: block;
+		}
+		
+		.second {
+			width: 4px;
+			height: 300px;
+			top: 50px;
+			left: 348px;
+			display: block;
+			border: none;
+			
+background-color: #da4f49;
+*background-color: #bd362f;
+background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+background-image: linear-gradient(to bottom, #ee5f5b, #bd362f);
+background-repeat: repeat-x;
+		}
+		
+		ul.numbers {
+			width: 700px;
+			height: 700px;
+			position: absolute;
+			top: 10px;
+			left: 325px;
+			margin: 0;
+			padding: 0;
+		}
+		
+		ul.numbers li {
+			width: 58px;
+			height: 58px;
+			margin: 0;
+			padding: 0;
+			font-size: 56px;
+			line-height: 56px;
+			font-weight: bold;
+			list-style: none;
+			position: absolute;
+			color: #ffffff;
+			text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+		}
+		
+		ul.numbers li:nth-child(1) {
+			display: none;
+		}
+		
+		ul.numbers li:nth-child(2) {
+			display: none;
+		}
+		
+		ul.numbers li:nth-child(3) {
+			left: 300px;
+			top: 322px;
+		}
+		
+		ul.numbers li:nth-child(4) {
+			display: none;
+		}
+		ul.numbers li:nth-child(5) {
+			display: none;
+		}
+		ul.numbers li:nth-child(6) {
+			left: -6px;
+			top: 600px
+		}
+		ul.numbers li:nth-child(7) {
+			display: none;
+		}
+		ul.numbers li:nth-child(8) {
+			display: none;
+		}
+		ul.numbers li:nth-child(9) {
+			left: -300px;
+			top: 322px
+		}
+		ul.numbers li:nth-child(10) {
+			display: none;
+		}
+		ul.numbers li:nth-child(11) {
+			display: none;
+		}
+		ul.numbers li:nth-child(12) {
+			left: -12px;
+			top: 10px
+		}
+		
+		
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		
+		var seconds = new Date().getSeconds();
+		var sdegree = seconds * 6;
+		var mins = new Date().getMinutes();
+		var hours = new Date().getHours();
+		var mdegree = mins * 6;
+		var hdegree = hours * 30 + (mins / 2);
+		var currentTime = 0;
+		var currentDeg_seconds = sdegree;
+		var currentDeg_minute = mdegree;
+		var currentDeg_hour = hdegree;
+		var divide = 32;
+		var time = 1000/divide;
+		var increase_seconds = 6/divide;
+		var increase_minute = 0.1/divide;
+		var increase_hour = 0.00166/divide;
+		
+		$(document).ready(function() {
+			
+		
+		var int=self.setInterval(function(){clock()},time);
+		function clock() {
+			
+			var d=new Date();
+			var t=d.toLocaleTimeString();
+			$(".time").html(t);
+		  window.currentTime = window.currentTime +1; 
+		 // seconds
+		  window.currentDeg_seconds = window.currentDeg_seconds + window.increase_seconds;
+		  	// update the css _seconds
+		  	$('.second').css('transform', 'rotate('+currentDeg_seconds+'deg)');
+		  	$('.second').css('-ms-transform', 'rotate('+currentDeg_seconds+'deg)');
+		  	$('.second').css('-webkit-transform', 'rotate('+currentDeg_seconds+'deg)');
+		  	$('.second').css('-moz-transform', 'rotate('+currentDeg_seconds+'deg)');
+		  	$('.second').css('-o-transform', 'rotate('+currentDeg_seconds+'deg)');
+			$('.dot').css('transform', 'rotate('+currentDeg_seconds+'deg)');
+			$('.dot').css('-ms-transform', 'rotate('+currentDeg_seconds+'deg)');
+			$('.dot').css('-webkit-transform', 'rotate('+currentDeg_seconds+'deg)');
+			$('.dot').css('-moz-transform', 'rotate('+currentDeg_seconds+'deg)');
+			$('.dot').css('-o-transform', 'rotate('+currentDeg_seconds+'deg)');
+		  	
+		  	// minute
+		  	  window.currentDeg_minute = window.currentDeg_minute + window.increase_minute;
+		  	  	// update the css _min
+		  	  	$('.minute').css('transform', 'rotate('+currentDeg_minute+'deg)');
+		  	  	$('.minute').css('-ms-transform', 'rotate('+currentDeg_minute+'deg)');
+		  	  	$('.minute').css('-webkit-transform', 'rotate('+currentDeg_minute+'deg)');
+		  	  	$('.minute').css('-moz-transform', 'rotate('+currentDeg_minute+'deg)');
+		  	  	$('.minute').css('-o-transform', 'rotate('+currentDeg_minute+'deg)');
+		  	  	
+		  	// hour
+		  	  window.currentDeg_hour = window.currentDeg_hour + window.increase_hour;
+		  	  
+		  	  	// update the css _hour
+		  	  	$('.hour').css('transform', 'rotate('+currentDeg_hour+'deg)');
+		  	  	$('.hour').css('-ms-transform', 'rotate('+currentDeg_hour+'deg)');
+		  	  	$('.hour').css('-webkit-transform', 'rotate('+currentDeg_hour+'deg)');
+		  	  	$('.hour').css('-moz-transform', 'rotate('+currentDeg_hour+'deg)');
+		  	  	$('.hour').css('-o-transform', 'rotate('+currentDeg_hour+'deg)');
+		  	  	
+		  	  	
+		  	
+		  }
+		  
+		  
+	  });
+	</script>
+</head>
+<body>
+	<h1>The Clock <span class="time"></span></h1>
+	<div id="theClock">
+		<div class="circle body"></div>
+		<ul class="numbers">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+		</ul>
+		<div class="hand hour"></div>
+		<div class="hand minute"></div>
+		<div class="hand second"></div>
+		<div class="circle dot"></div>
+	</div>
+</body>
+</html>
