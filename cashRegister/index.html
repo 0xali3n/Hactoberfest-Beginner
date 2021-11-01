@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register Manager</title>
+    <link rel="icon" type="image/png" href="icons/icon.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navigation container">
+        <div class="nav-brand">Cash Register Manager</div>
+    </nav>
+    <header class="hero container container-center">
+        <!-- <img class="hero-img" src="images/headerhero.svg" alt=""> -->
+        <h1 class="hero-heading"> Calculate Cash to return to your customer with <span class="heading-inverted">Cash
+                Register Manager</span></h1>
+    </header>
+
+    <section class="section">
+        <div class="container container-center">
+            <div class="before-next">
+                <label for="billAmount">Bill Amount</label>
+                <input type="number" class="input" id="billAmount" name="billAmount" min="1" max="1000000" required>
+                <button id="next" class="btn btn-primary">Next</button>
+            </div>
+            <div class="after-next">
+                <label for="cashAmount">Cash Given</label>
+                <input type="number" class="input" id="cashAmount" name="cashAmount" min="1" max="1000000" required>
+                <button  id="check" class="btn btn-primary">Check</button>
+                <button  id="reload" class="btn btn-secondary">Reload</button>
+            </div>
+           
+            <div class=message-table>
+                <p id="error-message"></p>
+                <table class="change-table">
+                    <caption>Return Cash</caption>
+                    <tr>
+                        <th>no of notes</th>
+                        <td class="no-of-notes"></td>
+                        <td class="no-of-notes"></td>
+                        <td class="no-of-notes"></td>
+                        <td class="no-of-notes"></td>
+                        <td class="no-of-notes"></td>
+                        <td class="no-of-notes"></td>
+                        <td class="no-of-notes"></td>
+                    </tr>
+                    <tr>
+                        <th>notes</th>
+                        <td>2000</td>
+                        <td>500</td>
+                        <td>100</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>5</td>
+                        <td>1</td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <ul class="list-non-bullet">
+            <li class="list-item-inline"><a target="_blank" class="link" href="https://github.com/rajulkoshta"><img
+                        src="icons/github.png" alt="icon"></a></li>
+            <li class="list-item-inline"><a target="_blank" class="link" href="https://twitter.com/RajulKoshta"><img
+                        src="icons/twitter.png" alt="icon"></a></li>
+            <li class="list-item-inline"><a target="_blank" class="link" href="https://www.linkedin.com/in/rajulkoshta/"><img
+                        src="icons/linkedin.png" alt="icon"></a>
+            </li>
+        </ul>
+    <p>© | 2021 |<a target="_blank" class="link" href="https://rajulkoshtaportfolio.netlify.app/"> RajulKoshta</a></p>
+        
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
