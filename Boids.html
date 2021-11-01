@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body style="margin: 0px; padding: 0px; box-sizing: border-box;">
+    <canvas id='canvas' style="overflow:none;"></canvas>
+    <input type="range" min="10" max="400" value="100" id='nums'>
+</body>
+<script>
+    const canvas = document.getElementById('canvas');
+    const slider = document.getElementById('nums');
+    const ctx = canvas.getContext('2d');
+
+    function Vector2f(x, y){
+        this.x = x;
+        this.y = y;
+    }
+
+    class Triangle {
+        constructor(pos, vel) {
+            this.pos = pos;
+            this.vel = vel;
+            this.rot = Math.atan2(vel.y, vel.x);
+        }
+    }
+
+    var num = 100;
+    const s = 5;
+    const side = 3;
+    const h = side * (Math.sqrt(3) / 2);
+    const sx = canvas.width = document.documentElement.scrollWidth;
+    const sy = canvas.height = document.documentElement.scrollHeight - 30;
+
+    var li = [];
+
+    function dst(p1, p2){
+        return Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
+    }
+
+    function add(p1, p2){
+        return new Vector2f(p1.x + p2.x, p1.y + p2.y);
+    }
+
+    function sub(p1, p2){
+        return new Vector2f(p1.x - p2.x, p1.y - p2.y);
+    }
+
+    function div(p1, c){
+        return new Vector2f(p1.x / c, p1.y / c);
+    }
+
+    function mul(p1, c){
+        return new Vector2f(p1.x * c, p1.y * c);
+    }
+
+    function mag(v){
+        return Math.sqrt(v.x * v.x + v.y * v.y);
+    }
+
+    function createPoints(n){
+        for(var i = 0; i < n; i++){
+            let p = new Triangle(new Vector2f(Math.floor(Math.random() * sx / s), Math.floor(Math.random() * sy / s)), 
+                                 new Vector2f(Math.random() * 4 - 2, Math.random() * 4 - 2));
+            li.push(p);
+        }
+    }
+
+    slider.addEventListener('change', (e) => {
+        if(slider.value > num){
+            createPoints(slider.value - num);
+            num = slider.value - 1;
+        }
+        else{
+            li.splice(0, num - slider.value);
+            num = slider.value - 1;
+        }
+    });
+
+    function update(){    
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, sx, sy);
+
+        ctx.fillStyle = "#000000";
+        for(var i = 0; i < num; i++){
+            if(li[i].pos.x > sx / s || li[i].pos.x < 0) li[i].pos.x = Math.abs(li[i].pos.x - sx / s);
+            if(li[i].pos.y > sy / s || li[i].pos.y < 0) li[i].pos.y = Math.abs(li[i].pos.y - sy / s);
+
+            li[i].pos = add(li[i].pos, li[i].vel);
+            li[i].rot = Math.atan2(li[i].vel.y, li[i].vel.x);
+
+            ctx.save();
+            
+            //Rotate Triangle
+            ctx.translate(li[i].pos.x * s, li[i].pos.y * s);
+            ctx.rotate(li[i].rot + 100);
+            ctx.translate(-(li[i].pos.x * s), -(li[i].pos.y * s));
+
+            //Draw Triangle
+            ctx.beginPath();
+            
+            ctx.moveTo(li[i].pos.x * s, (li[i].pos.y - h * (2 / 3)) * s);
+            ctx.lineTo((li[i].pos.x - side / 2) * s, (li[i].pos.y + h / 3) * s);
+            ctx.lineTo((li[i].pos.x + side / 2) * s, (li[i].pos.y + h / 3) * s);
+            ctx.lineTo(li[i].pos.x * s, (li[i].pos.y - h * (2 / 3)) * s);
+            
+            ctx.fill();
+            ctx.closePath();
+            ctx.restore();
+
+            // if(i == 0){
+            //     //Direction
+            //     ctx.beginPath();
+            //     ctx.moveTo(li[i].pos.x * s, li[i].pos.y * s);
+            //     ctx.lineTo((li[i].pos.x + 10 * Math.cos(li[i].rot)) * s, (li[i].pos.y + 10 * Math.sin(li[i].rot)) * s);
+
+            //     ctx.stroke();
+            //     ctx.closePath();
+
+            //     //Radius
+            //     ctx.beginPath();
+            //     ctx.arc(li[i].pos.x * s, li[i].pos.y * s, 100, 0, 2 * Math.PI);
+
+            //     ctx.stroke();
+            //     ctx.closePath();
+            // }
+            let cnt = 0;
+            var dirsum = 0;
+            var steeringAlignment = new Vector2f(0, 0), 
+                steeringCohesion = new Vector2f(0, 0), 
+                steeringSeperation = new Vector2f(0, 0);
+
+            for(var j = 0; j < num; j++){
+                if(i != j && dst(li[i].pos, li[j].pos) <= 100 / s){
+                    var dist = new Vector2f(li[i].pos.x - li[j].pos.x, li[i].pos.y - li[j].pos.y);
+
+                    steeringSeperation = add(steeringSeperation, div(dist, dst(li[i].pos, li[j].pos)));
+                    steeringCohesion = add(steeringCohesion, li[j].pos);
+                    steeringAlignment = add(steeringAlignment, li[j].vel);
+                    cnt++;
+                }
+            }
+            if(cnt > 0){
+                steeringSeperation = div(steeringSeperation, cnt);
+                steeringCohesion = div(steeringCohesion, cnt);
+                steeringAlignment = div(steeringAlignment, cnt);
+
+                steeringCohesion = sub(steeringCohesion, li[i].pos);
+                steeringCohesion = sub(steeringCohesion, li[i].vel);
+                steeringSeperation = sub(steeringSeperation, li[i].vel);
+                steeringAlignment = sub(steeringAlignment, li[i].vel);
+
+                steeringSeperation = mul(steeringSeperation, 2 / mag(steeringSeperation));
+                steeringCohesion = mul(steeringCohesion, 0.3 / mag(steeringCohesion));
+                steeringAlignment = mul(steeringAlignment, 0.4 / mag(steeringAlignment)); 
+            }            
+            li[i].vel = add(li[i].vel, steeringAlignment);
+            li[i].vel = add(li[i].vel, steeringCohesion);
+            li[i].vel = add(li[i].vel, steeringSeperation);
+
+            li[i].vel = mul(li[i].vel, 3 / mag(li[i].vel));
+        }
+    }
+
+    createPoints(num);
+    setInterval(update, 50);
+</script>
+</html>
