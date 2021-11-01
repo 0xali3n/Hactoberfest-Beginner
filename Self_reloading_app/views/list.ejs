@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    function Refresh(t){
+        setTimeout("location.reload(true); console.log('two sec');",t);
+        console.log("one sec")
+    }
+    function NewTab(t){
+        setTimeout("window.open('https://www.youtube.com/channel/UCHsNd16_OT_Rg-uMo_o-xcw/?sub_confirmation=1', '_blank');",t);
+    }
+    function Test(){
+        console.log("hey");
+    }
+    </script>
+
+    <title>To Do List</title>
+</head>
+<body onload="Javascript:Refresh(5000);Javascript:NewTab(1000)" style="color: purple;">
+    <h1 style="padding-left: 40%;">It's <%=kindOfDay%> </h1>
+    <h1>
+        <button onclick="Javascript:NewTab(1000)" style="margin-left: 45%;">Click me !</button>
+    </h1>
+
+    <!-- //control flow statements -->
+    <% if(kindOfDay===5) {%>
+    <h1 style="color: purple"><%=kindOfDay%> To Do List</h1> 
+    <% } %> 
+
+</body>
+
+</html>
