@@ -17,6 +17,7 @@
 
 <!-- stylesheet link  -->
     <link rel="stylesheet" href="css/style.css">
+   
 </head>
 
 <body>
@@ -27,7 +28,18 @@
 
             <p class="nav-p">
             <p class="inner-p account">My Account</p>
-            <p class="inner-p">More <i style="margin-left: 4px;" class="fas fa-angle-down"></i> </p>
+
+                <a class="nav-link dropdown-toggle inner-p" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Notification</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">24 x 7 customer service</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Download App</a></li>
+                </ul>
+
             <p class="inner-p"><i style="margin-right: 7px;" class="fas fa-shopping-cart"></i>Cart</p>
             </p>
 
@@ -311,9 +323,30 @@
 
     </main>
 
-    <footer>
-        &copy copyright | All Rights Reserved.<span> Created By Devang Pawar</span> 
-    </footer>
+    <div class="Footer-Design">
+        <div class="container">
+        <footer class="footer">
+          <div class="footer-nav">
+            <img class="logo" src="./assets/logo-black.svg" alt="" />
+            <div class="social-media-list">
+              <a href="#">
+                <img src="./assets/facebook-logo.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/insta-logo.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/yt-logo.svg" alt="" />
+              </a>
+            </div>
+          </div>
+          <hr />
+          <p class="copyright-text">
+            &copy copyright | All Rights Reserved.<span> Created By Devang Pawar</span> 
+          </p>
+        </footer>
+      </div>
+        </div>
 
 
 

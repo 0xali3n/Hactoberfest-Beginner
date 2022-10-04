@@ -144,3 +144,13 @@ footer span{
         overflow-x: scroll;
     }
 }
+
+.Footer-Design{
+    padding: 7rem 0;
+    background-color: #2874f0;
+    color: white;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
