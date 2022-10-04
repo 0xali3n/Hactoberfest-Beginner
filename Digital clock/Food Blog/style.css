@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kanit&family=Mochiy+Pop+P+One&family=Varela+Round&display=swap');
+body {
+  font-family: Open Sans;
+  background-image: url(images/img2.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+
+}
+
+.webinar-grid {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.link-block {
+  position: relative;
+  width: 40%;
+  min-height: 400px;
+  text-align: center;
+  margin: 20px auto;
+  background-color: darksalmon;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.2s cubic-bezier(.25, .8, .25, 1);
+  border-radius: 5px ;
+  font-family: 'Mochiy Pop P One', sans-serif;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 18px;
+  border: 7px double black;
+}
+
+.link-block:hover {
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  text-decoration: none;
+}
+
+.link-block .dundas-blue-link {
+  background: rgb(0, 0, 0);
+  border: solid 1px rgb(0, 0, 0);
+  padding: 10px 25px;
+  color: #fff;
+  width: auto;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: all 0.8s cubic-bezier(.25, .8, .25, 1);
+}
+
+.link-block .dundas-blue-link:hover {
+  background: #fff;
+  color:darksalmon;
+}
+
+.link-block .webinar-image-container {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  top: 0;
+  transition: all 0.5s cubic-bezier(.25, .8, .25, 1);
+  z-index: 200;
+}
+
+.link-block:hover .webinar-image-container {
+  top: -40px;
+  transform: scale(1.2);
+}
+
+.link-block .dundas-blue-text-long {
+  position: absolute;
+  top: 300px;
+  transition: all 0.8s cubic-bezier(.25, .8, .25, 1);
+  background-color: rgb(241, 104, 58);
+  z-index: 100;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 27px;
+  padding: 0 10px;
+  opacity: 1;
+  border-radius: 20px 0 0 20px;
+  border-top: 20px solid transparent;
+  border-right: 40px solid rgb(247, 85, 32);
+  border-bottom: 20px solid transparent;
+}
+
+.link-block:hover .dundas-blue-text-long {
+  top: -20px;
+  opacity: 0;
+}
+
+.link-block h2 {
+  position: absolute;
+}
+
+.link-block .webinar-content-box {
+  position: relative;
+  padding: 2px;
+  top: -20px;
+  transition: all 0.5s cubic-bezier(.25, .8, .25, 1);
+  opacity: 0;
+  background-color: darksalmon;
+
+}
+.jumbotron.left-right-jumbotron-block{
+  background-color:darksalmon ;
+  width: fit-content;
+  height:500px;
+}
+
+.link-block:hover .webinar-content-box {
+  top: -35px;
+  opacity: 1;
+  transform: scale(0.8);
+text-decoration: none;
+
+}
+.webinar-content-box p {
+  padding: 0 0 20px 0;
+  color: #000000;
+  text-align: left;
+
+}
+
+.webinar-image-container img {
+
+  width:  100%;
+    height: 100%;
+    object-fit:cover;
+  border-radius: 5px;
+}
+.img{
+  max-width: 100%;  
+  height: auto;  
+  object-fit: cover;
+  z-index: 1;
+}
+img.vert-move {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+img.vert-move {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+.archive {
+  display: none;
+}
+
+@media only screen and (min-width: 569px) and (max-width: 880px) {
+  .link-block {
+    position: relative;
+    width: 45%;
+    max-width: 330px;
+  }
+  .link-block .dundas-blue-text-long {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 568px) {
+  .link-block {
+    position: relative;
+    width: 90%;
+    max-width: 300px;
+  }
+  .link-block .dundas-blue-text-long {
+    font-size: 18px;
+  }
+}
+
+.videoWrapper {
+  height: auto;
+  width: 723px;
+  position: relative;
+  overflow: hidden;
+}
+
+.videoWrapper iframe {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
