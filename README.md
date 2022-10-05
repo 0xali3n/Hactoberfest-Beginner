@@ -1,5 +1,4 @@
 <h1 align="center"> Hacktoberfest 2021 </h1>
-<img src="https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg">
 
 ***
 <h3 align="center">
@@ -54,4 +53,4 @@ This year, the first 50,000 participants who successfully complete the challenge
     4. commit the code
     5. Make pull request
 ***
-<a href="https://www.factsprime.com/" target="_blank" rel="noopener"><img class="alignnone " src="https://getsiteglue.com/wp-content/uploads/2018/04/demo-button.png" width="288" height="99" /></a>
+
