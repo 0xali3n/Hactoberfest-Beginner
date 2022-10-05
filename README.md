@@ -1,15 +1,14 @@
-<h1 align="center"> Hacktoberfest 2021 </h1>
-<img src="https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg">
+<h1 align="center"> Hacktoberfest 2022</h1>
 
 ***
 <h3 align="center">
-    <a href="https://hacktoberfest.digitalocean.com/">
-        Join Hacktoberfest 2021 From Here 
+    <a href="https://hacktoberfest.digitalocean.com/" target="_blank">
+        Join Hacktoberfest 2022 From Here 
     </a>
 </h3>
 
 <h4 align="center">Support open source throughout October!</h4>
-<p align="center">Hacktoberfest encourages participation in the open source community, which grow</p>
+<p align="center">Hacktoberfest is digitalocean’s annual event that encourages people to contribute to open source throughout october. much of modern tech infrastructure—including some of digitalocean’s own products—relies on open-source projects built and maintained by passionate people who often don’t have the staff or budgets to do much more than keep the project alive. hacktoberfest is all about giving back to those projects, sharpening skills, and celebrating all things open source, especially the people that make open source so special..</p>
 
 ## What is Hacktoberfest?
 
@@ -25,11 +24,11 @@ Hacktoberfest, in its 8th year, is a month-long celebration of open source softw
 ## How Does it Work?
 Hacktoberfest is open to everyone in our global community!
 - Maintainers determine if their open-source projects participate.
-- Four Successful pull requests submitted on GitHub and GitLab are rewarded.
+- 4 successful pull requests submitted on GitHub and GitLab are rewarded.
 - Engaged maintenance of Hacktoberfest tagged repositories are rewarded.
 
 
-This year, the first 50,000 participants who successfully complete the challenge will be eligible to receive a prize.
+This year, the first 40,000 participants who successfully complete the challenge will be eligible to receive a prize.
 
 ***
 ## Rules To Contribute To This Repo
@@ -54,4 +53,4 @@ This year, the first 50,000 participants who successfully complete the challenge
     4. commit the code
     5. Make pull request
 ***
-<a href="https://www.factsprime.com/" target="_blank" rel="noopener"><img class="alignnone " src="https://getsiteglue.com/wp-content/uploads/2018/04/demo-button.png" width="288" height="99" /></a>
+
