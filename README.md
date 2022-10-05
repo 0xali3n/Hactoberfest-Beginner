@@ -1,14 +1,14 @@
-<h1 align="center"> Hacktoberfest 2021 </h1>
+<h1 align="center"> Hacktoberfest 2022</h1>
 
 ***
 <h3 align="center">
-    <a href="https://hacktoberfest.digitalocean.com/">
-        Join Hacktoberfest 2021 From Here 
+    <a href="https://hacktoberfest.digitalocean.com/" target="_blank">
+        Join Hacktoberfest 2022 From Here 
     </a>
 </h3>
 
 <h4 align="center">Support open source throughout October!</h4>
-<p align="center">Hacktoberfest encourages participation in the open source community, which grow</p>
+<p align="center">Hacktoberfest is digitalocean’s annual event that encourages people to contribute to open source throughout october. much of modern tech infrastructure—including some of digitalocean’s own products—relies on open-source projects built and maintained by passionate people who often don’t have the staff or budgets to do much more than keep the project alive. hacktoberfest is all about giving back to those projects, sharpening skills, and celebrating all things open source, especially the people that make open source so special..</p>
 
 ## What is Hacktoberfest?
 
