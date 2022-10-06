@@ -143,6 +143,10 @@ background-image: linear-gradient(120deg,  white, #1C2A3D);    margin-top: 80px;
 small{
     color: #555;
 }
+.color-change
+{
+    color : white ;
+}
 /*-------------- Testimonial -----------------*/
 
 .testimonial{
