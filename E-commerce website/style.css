@@ -68,7 +68,7 @@ p{
     background: rgb(37, 35, 35);
 }
 .header{
-    background: radial-gradient(#fff,#d19c3bb4);
+    background: radial-gradient(#fff,#CCCCCC);
 }
 .header .row{
     margin-top: 65px;
@@ -134,7 +134,7 @@ h4{
 
 
 .offer{
-    background: radial-gradient(#fff,#d19c3bb4);
+    background: radial-gradient(#fff,#CCCCCC);
     margin-top: 80px;
     padding: 30px 0;
 }
@@ -419,7 +419,7 @@ th:last-child{
 
 .account-page{
     padding: 50px 0;
-    background: radial-gradient(#fff,#d19c3bb4);
+    background: radial-gradient(#fff,#CCCCCC);
 }
 .form-container{
     background: #fff;
