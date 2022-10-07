@@ -1,3 +1,5 @@
+alert("click on play button to play");
+
 function trigger(){
     var imagepath="images/";
     var dice="dice";
