@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project1</title>
+    <!-- <link rel="stylesheet" href="./styling.css"> -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="brand">
+                <h1><a href="#">Zero The Fun</a></h1>
+            </div>
+            <div id="searchbox">
+                <form method="get" >
+                    <input type="text" class="text">
+                    <input type="submit" value="search " class="submit">
+                </form>
+            </div>
+            <div class="clear">
+
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Donate</a></l i>
+                </ul>
+
+            </div>
+            <div id="intro">
+                <h3>
+                    Math is Fun !
+                </h3>
+            </div>
+            <div id="left" class="bar">
+                <h3>Topics:</h3>
+                <ul> 
+                    <li><a href="" >Chapter 1</a></li>
+                    <li><a href="" >Chapter 2</a></li>
+                    <li><a href="" >Chapter 3</a></li>
+                    <li><a href="" >Chapter 4</a></li>
+                    <li><a href="" >Chapter 5</a></li>
+                </ul>
+            </div>
+            <div id="right" class="bar">
+                <h3>Why us ?</h3>
+                <ul>
+                    <li><a href="" >Proper Arrangent</a></li>
+                    <li><a href="" >Communication</a></li>
+                    <li><a href="" >Best Teachers</a></li>
+                    <li><a href="" >Feedback System</a></li>
+                    <li><a href="" >NONE</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <footer class="footer">
+                <div>
+                    <p> Created by Purvesh Patil &copy;</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+#container{
+    width:1500 px;
+    margin: 0 auto;
+}
+#header{
+    height: 100px;
+    padding: 10px 0;
+    margin-left: 40px;
+}
+h1 a{
+    font-size: 50px;
+    font-weight: 120;
+    color:purple ;
+    text-decoration: none;
+}
+#searchbox{
+    float: right;
+    background-color: rgb(119, 223, 91);
+    width: 400px;
+    height: 40px;
+    padding: 20px 20px 0px 20px ;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+#brand{
+    float: left;
+}
+
+.text{
+    float: left;
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    color: rgb(224, 16, 16);
+    background: white url(images/search.jpg);
+}
+.submit{
+    float: right;
+    padding: 4px;
+    width: 55px;
+    font-weight: bold;
+    color: white;
+    background: purple;
+}
+.clear{
+    clear: both;
+}
+ul{
+    list-style: none;
+}
+#menu ul li{
+    float: left;
+    padding:0 30px;
+    border-right:1px solid purple;
+}
+#menu{
+    height: 50px;
+    background: rgb(220, 220, 121);
+    
+}
+#menu ul a{
+    text-decoration: none;
+    font-size: 20px;
+    color: purple;
+}
+#menu ul li a{
+    text-decoration: none;
+    font-size: 19;
+    line-height: 40px;
+    transition:font-size 0.2s ease;
+}
+#menu ul li:last-child{
+    border-right: none;
+}
+#menu ul li a:hover,#menu ul li a.active{
+    font-size: 30px;
+    font-weight: bold;
+}
+#intro{
+    background:rgb46, 215, 218;
+    pad: 30px;
+    margin: 16px 0;
+}
+#intro h3{
+    font-size: 45px;
+    color:green ;
+    text-align: center;
+}
+.bar{
+    height: 500px;
+    width: 450px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    padding: 20px 50px;
+    
+}
+#left{
+    float: left;
+    background-color: bisque;
+    
+}
+#right{
+    float: right;
+    background-color: bisque;
+}
+.bar h3{
+    color: purple;
+    font-size: 30px;  
+}
+.bar ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(228, 98, 17);
+}
+.bar ul li a:hover{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    transition:font-size 0.4s ease;
+}
+#left ul li{
+    padding-bottom: 30px;
+    text-align: center; 
+}
+#right ul li{
+    padding-bottom: 30px;
+    text-align: center;
+
+}
+.bar ul{
+    padding-top: 10px;
+}
+.footer{
+    height: 60px;
+    color: blueviolet;
+    font-weight: bold;
+    text-align: right;
+}
+.footer p{
+    font-size: 30px;
+}
+.footer p:hover{
+    font-size: 40px;
+    color: black;
+}
+
+</html>
