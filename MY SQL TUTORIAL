@@ -1,0 +1,26 @@
+MySQL is a relational database management system based on the Structured Query Language, which is the popular language for accessing and managing the records in the database.
+MySQL is open-source and free software under the GNU license. It is supported by Oracle Company.
+
+
+
+What is Database?
+It is very important to understand the database before learning MySQL. A database is an application that stores the organized collection of records. It can be accessed and manage by the user very easily. It allows us to organize data into tables, rows, columns, and indexes to find the relevant information very quickly. Each database contains distinct API
+for performing database operations such as creating, managing, accessing, and searching the data it stores. Today, many databases available like 
+MySQL,
+Sybase,
+Oracle,
+MongoDB, 
+PostgreSQL,
+SQL Server
+etc. In this section, we are going to focus on MySQL mainly.
+
+
+How MySQL Works?
+The core of the MySQL database is the MySQL Server. This server is available as a separate program and responsible for handling all the database instructions, statements, or commands. The working of MySQL database with MySQL Server are as follows:
+MySQL creates a database that allows you to build many tables to store and manipulate data and defining the relationship between each table.
+
+Clients make requests through the GUI screen or command prompt by using specific SQL expressions on MySQL.
+
+Finally, the server application will respond with the requested expressions and produce the desired result on the client-side.
+
+For more details, Visit: https://www.javatpoint.com/mysql-tutorial
