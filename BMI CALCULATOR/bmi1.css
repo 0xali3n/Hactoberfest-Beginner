@@ -1,0 +1,45 @@
+body{
+    margin:0;
+    padding:0;
+    /* text-align:center; */
+    font-family:sans-serif;
+    background-color: #a0d9ef;
+   /*background-image: url(bmiphoto.webp);*/
+   background-size: cover;
+}
+div{
+   width:500px; 
+   /* height:300px; */
+   position:absolute;
+   top:20%;
+   left:30%; 
+    background-color: rgb(46, 43, 43,.5);
+    padding:25px;
+    box-shadow:2px 2px 20px wheat;
+}
+h1{
+    color:white;
+    text-align:center;
+}
+label{
+    text-align: left;
+    color:white;
+} 
+#result{
+    color:white;
+}
+#btn{
+    font-size: inherit;
+    color:white;
+    background-color: rgb(34, 158, 158);
+    padding:10px;
+    margin:auto;
+    border-radius:2px;
+}
+#btn:hover{
+    background-color: red;
+    cursor:pointer;
+}
+#info{
+    color:white;
+}
