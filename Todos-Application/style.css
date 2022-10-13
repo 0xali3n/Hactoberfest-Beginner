@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.bg-container {
+    background-color: #f5fcff;
+    height: 100vh;
+    font-family: 'Roboto';
+}
+
+.main-heading {
+    margin: 20px 0;
+    font-size: 40px;
+}
+
+.side-heading{
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.sub-part-heading{
+    font-weight: normal;
+}
+
+.input-text{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 13px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.add-button, .save-button{
+    margin: 20px 0 30px 0;
+    background-color: black;
+    background-color: #25AAED;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 20px;
+    border-width: 0;
+    border-radius: 10px;
+}
+
+.todo-items-container{
+    margin: 0;
+    padding: 0;
+}
+
+.todo-item{
+    margin: 15px 0;
+    list-style: none;
+    width: 100%;
+}
+
+.checkbox-input{
+    margin-top: 12px;
+    margin-right: 12px;
+    height: 20px;
+    width: 20px;
+}
+
+.label-container{
+    border-left: 5px solid #70d2ff;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #d6f0ff;
+}
+
+.label-element{
+    width: 85%;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.delete-container{
+    width: 15%;
+    text-align: right;
+}
+
+.delete-icon{
+    padding: 15px;
+}
+
+.checked{
+    text-decoration: line-through;
+}
