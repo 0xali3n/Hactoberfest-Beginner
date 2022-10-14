@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "e-commerce";
+  src:url("https://d19m59y37dris4.cloudfront.net/shirt/2-1-1/fonts/e-commerce.eot");
+  src:url("https://d19m59y37dris4.cloudfront.net/shirt/2-1-1/fonts/e-commerce.eot?#iefix") format("embedded-opentype"),
+    url("https://d19m59y37dris4.cloudfront.net/shirt/2-1-1/fonts/e-commerce.woff") format("woff"),
+    url("https://d19m59y37dris4.cloudfront.net/shirt/2-1-1/fonts/e-commerce.ttf") format("truetype"),
+    url("https://d19m59y37dris4.cloudfront.net/shirt/2-1-1/fonts/e-commerce.svg#e-commerce") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "e-commerce" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "e-commerce" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-badge:before {
+  content: "\62";
+}
+.icon-headset:before {
+  content: "\6a";
+}
+.icon-mail-1:before {
+  content: "\6c";
+}
+.icon-marker:before {
+  content: "\6d";
+}
+.icon-phone-1:before {
+  content: "\71";
+}
+.icon-price-tag:before {
+  content: "\77";
+}
+.icon-replay-arrow:before {
+  content: "\78";
+}
+.icon-shirt:before {
+  content: "\79";
+}
+.icon-settings:before {
+  content: "\42";
+}
+.icon-shopping-bag:before {
+  content: "\43";
+}
+.icon-cart-1:before {
+  content: "\44";
+}
+.icon-shirt-and-tie:before {
+  content: "\69";
+}
+.icon-like:before {
+  content: "\7a";
+}
+.icon-expand:before {
+  content: "\45";
+}
+.icon-quote:before {
+  content: "\46";
+}
+.icon-search:before {
+  content: "\47";
+}
+.icon-truck:before {
+  content: "\48";
+}
+.icon-close:before {
+  content: "\63";
+}
+.icon-android-remove:before {
+  content: "\65";
+}
+.icon-android-add:before {
+  content: "\41";
+}
+.icon-shipping-truck:before {
+  content: "\49";
+}
+.icon-coin:before {
+  content: "\4a";
+}
+.icon-coin-stack:before {
+  content: "\4b";
+}
+.icon-coins:before {
+  content: "\4c";
+}
+.icon-credit-card:before {
+  content: "\4d";
+}
+.icon-credit-card-1:before {
+  content: "\4e";
+}
+.icon-gift:before {
+  content: "\4f";
+}
+.icon-hand:before {
+  content: "\50";
+}
+.icon-headset-1:before {
+  content: "\51";
+}
+.icon-key-chain:before {
+  content: "\52";
+}
+.icon-lock:before {
+  content: "\53";
+}
+.icon-money-bag:before {
+  content: "\54";
+}
+.icon-percentage:before {
+  content: "\55";
+}
+.icon-phone-call:before {
+  content: "\56";
+}
+.icon-price:before {
+  content: "\57";
+}
+.icon-price-tag-1:before {
+  content: "\58";
+}
+.icon-price-tag-2:before {
+  content: "\59";
+}
+.icon-price-tag-4:before {
+  content: "\5a";
+}
+.icon-price-tag-5:before {
+  content: "\30";
+}
+.icon-price-tag-6:before {
+  content: "\31";
+}
+.icon-sale:before {
+  content: "\32";
+}
+.icon-shopping-bag-2:before {
+  content: "\33";
+}
+.icon-shopping-bag-3:before {
+  content: "\34";
+}
+.icon-shopping-cart:before {
+  content: "\35";
+}
+.icon-shopping-cart-2:before {
+  content: "\36";
+}
+.icon-shopping-cart-3:before {
+  content: "\37";
+}
+.icon-trolley:before {
+  content: "\38";
+}
+.icon-truck-1:before {
+  content: "\39";
+}
+.icon-truck-2:before {
+  content: "\21";
+}
+.icon-truck-3:before {
+  content: "\22";
+}
+.icon-wallet:before {
+  content: "\23";
+}
+.icon-hat:before {
+  content: "\61";
+}
+.icon-plate:before {
+  content: "\64";
+}
+.icon-map:before {
+  content: "\66";
+}
+.icon-mail:before {
+  content: "\67";
+}
+.icon-phone:before {
+  content: "\68";
+}
+.icon-printer:before {
+  content: "\6b";
+}
+.icon-work-team:before {
+  content: "\6e";
+}
+.icon-floppy-o:before {
+  content: "\6f";
+}
+.icon-line-chart:before {
+  content: "\70";
+}
+.icon-page:before {
+  content: "\72";
+}
+.icon-bell-o:before {
+  content: "\73";
+}
+.icon-bell:before {
+  content: "\74";
+}
+.icon-envelope:before {
+  content: "\75";
+}
+.icon-email-mail-streamline:before {
+  content: "\76";
+}
+.icon-mail-2:before {
+  content: "\24";
+}
+.icon-ios-email-outline:before {
+  content: "\25";
+}
+.icon-envelope-o:before {
+  content: "\26";
+}
+.icon-cancel:before {
+  content: "\27";
+}
+.icon-close-1:before {
+  content: "\28";
+}
