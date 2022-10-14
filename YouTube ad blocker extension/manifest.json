@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "YouTube Ad-blocker ",
+    "version": "0.1",
+    "description": "Extension that turns off YouTube ad-movies and ad-banners automatically.",
+    "icons": {
+        "128": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": [
+                "script.js"
+            ]
+        }
+    ]
+}
