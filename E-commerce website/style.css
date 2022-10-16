@@ -68,7 +68,7 @@ p{
     background: rgb(37, 35, 35);
 }
 .header{
-    background: radial-gradient(#fff,#d19c3bb4);
+    background-image: linear-gradient(120deg,  white, #1C2A3D);
 }
 .header .row{
     margin-top: 65px;
@@ -134,8 +134,7 @@ h4{
 
 
 .offer{
-    background: radial-gradient(#fff,#d19c3bb4);
-    margin-top: 80px;
+background-image: linear-gradient(120deg,  white, #1C2A3D);    margin-top: 80px;
     padding: 30px 0;
 }
 .col-2 .offer-img{
@@ -143,6 +142,10 @@ h4{
 }
 small{
     color: #555;
+}
+.color-change
+{
+    color : white ;
 }
 /*-------------- Testimonial -----------------*/
 
