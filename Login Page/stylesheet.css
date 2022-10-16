@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+html {
+    height:100%;
+}
+body {
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+    background:#fff;
+}
+
+.login-box {
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:400px;
+    padding:40px;
+    transform:translate(-50%, -50%);
+    background:#fc5185;
+    box-sizing:border-box;
+    border-radius:10px;
+    border:2px solid #000;
+}
+
+.row{
+    text-align:center;
+    margin-top:-100px;
+}
+
+.login-box img{
+    width:120px;
+    height:120px;
+}
+
+.login-box h2{
+    margin:0 0 30px;
+    padding:0;
+    color:#0e153a;
+    text-align:center;
+}
+
+.login-box .user-box{
+    position:relative;
+}
+
+.login-box .user-box input{
+    width:100%;
+    padding:10px 0;
+    font-size:18px;
+    color:#000;
+    margin-bottom:30px;
+    border: none;
+    border-bottom:1px solid #fff;
+    outline:none;
+    background:transparent;
+}
+
+.login-box .user-box label{
+    position:absolute;
+    top:0;
+    left:0;
+    padding:10px 0;
+    font-size:16px;
+    color:#fff;
+    pointer-events:none;
+    transition:.5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid ~ label {
+    top:-20px;
+    left:0;
+    color:#0e153a;
+    font-size:12px;
+}
+
+span{
+    position:relative;
+    display:inline-flex;
+    width: 120px;
+    height:45px;
+}
+
+span a{
+    font-size:12px;
+    letter-spacing:1px;
+    transform-style:preserve-3d;
+    transform:translateZ(-25px);
+    transition:transform .25s;
+}
+
+span a:before,
+span a:after{
+    height:45px;
+    width:100px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-sizing:border-box;
+    border-radius:5px;
+}
+
+span a:before{
+    position:absolute;
+    content:"Button";
+    color:#fff;
+    background:#000;
+    transform:rotateY(0deg) translateZ(25px);
+}
+
+span a:after{
+    position:absolute;
+    content:"Submit";
+    font-weight:bold;
+    color:#000;
+    transform:rotateX(90deg) translateZ(25px);
+    border:2px solid white;
+    background:#fff;
+}
+
+span a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+}
