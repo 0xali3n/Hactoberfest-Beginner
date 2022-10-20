@@ -196,6 +196,11 @@
     cursor: pointer;
 
 }
+.form-btn:hover{
+    background-color: teal;
+    color: white;
+
+}
 .footer
 {
     background-color: rgba(0, 92, 92, 0.932);

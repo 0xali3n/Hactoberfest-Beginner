@@ -172,7 +172,10 @@ html
 }
 .button-pri:hover, .button-sec:hover
 {
-    background-color: rgb(226, 223, 223);
+    background-color: tomato;
+    color: rgb(226, 223, 223);
+    border: 2px solid rgb(226, 223, 223);
+    transform: scale(1.1);
 }
 .button-sec
 {
