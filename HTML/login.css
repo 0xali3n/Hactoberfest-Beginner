@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Varela+Round&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+body{
+    background-color: rgb(182, 228, 229);
+}
+.navbar
+{
+    /* border: 2px solid white; */
+    padding:1rem ;
+    background-color:teal;
+}
+.logo,.navbar a
+{
+    color: white;
+}
+.logo
+{
+    float: left;
+    font-size: 5rem;
+    
+}
+.nav-items
+{
+    float: right;
+    margin-top:2rem ;
+
+    /* font-size: smaller; */
+}
+
+.navbar::after
+{
+    content: '';
+    display: block;
+    clear: both;
+}
+.navbar a:visited
+{
+    color:whitesmoke;
+}
+.navbar .nav-item
+{
+    display: inline-block;
+    text-transform:uppercase ;
+    font-family: 'Varela Round', sans-serif;
+    /* font-size: small; */
+    color: #fbfcfd ;
+    padding:1rem 2.5rem;
+    background: transparent;
+    /* border:1px solid #fff; */
+    /* border-radius: 30px; */
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0.5em;
+}
+.loginpage{
+    padding-top: 5rem 0;
+}
+.loginpage h1{
+    display: inline-block;
+    margin-right: 1rem;
+    font-weight: bolder;
+    font-size:xx-large;
+    color: teal;
+    margin-top: 30px;
+}
+.container label::after
+{
+    content: '*';
+    color: tomato;
+}
+.container p
+{
+    font-size: 20px;
+}
+.form-wrap label
+{
+    display: block;
+    font-size: 18px;
+}
+.form-wrap .container input
+{
+    padding: 0.5rem;
+    width: 60%;
+    padding-right: 1rem;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.form-group{
+    position: relative;
+    padding-bottom: 20px;
+}
+.container{
+    background-color: #fbfcfd;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 60%;
+    padding-left: 1.5rem;
+    border: 3px solid teal;
+    border-radius: 10px;
+}
+.terms{
+    font-size: 13px;
+    color: rgb(81, 81, 251);
+}
+.terms:hover{
+    color: tomato;
+    text-decoration: underline;
+}
+.clearfix .signupbtn{
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgb(68, 68, 252);
+    color: #fbfcfd;
+    border-color: rgb(68, 68, 252);
+    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.clearfix .cancelbtn{
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fbfcfd;
+    color: rgb(87, 86, 86);
+    border-color: rgb(147, 146, 146);
+}
+.cancelbtn:hover{
+    background-color: rgb(228, 228, 225);
+}
+.signupbtn:hover{
+    background-color: #fbfcfd;
+    color: rgb(68, 68, 252);
+}
+.footer
+{
+    background-color: rgba(0, 92, 92, 0.932);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+.social-media-links i
+{
+    margin: 1rem ;
+}
+@media (max-width:600px){
+    .form-wrap .container input{
+        width: 90%;
+    }
+    .navbar .nav-items, .navbar .logo
+    {
+        float: none;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+}
