@@ -1,0 +1,38 @@
+.calc{
+    width: 400px;
+    height: 425px;
+    background-image: url(background.jpg);
+    border-radius: 10px;
+}
+#screen{
+    border-radius: 0;
+    border: 0;
+    width: 350px;
+    margin-left: 23px;
+    margin-top: 10px;
+    height: 28px;
+    pointer-events: none;
+}
+.btn{
+    width: 52px;
+    height: 44px;
+    border-radius: 0;
+    margin-left: 35px;
+    margin-top: 16px;
+    background: khaki;
+}
+.clear-btn{
+    width: 52px;
+    height: 44px;
+    border-radius: 0;
+    margin-left: 172px;
+    margin-top: 16px;
+    background: khaki;
+}
+.main-body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
