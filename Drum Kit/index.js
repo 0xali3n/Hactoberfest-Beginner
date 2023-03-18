@@ -1,3 +1,4 @@
+alert("click on images to play the sound");
 var lengthOfSet = document.firstElementChild.lastElementChild.children[1].children.length;
 
 
@@ -6,6 +7,7 @@ document.addEventListener("keydown",function(event){
   playDrum(event.key);
     buttonAnimation(event.key);
 });
+
 
 while (lengthOfSet >= 0) {
 
