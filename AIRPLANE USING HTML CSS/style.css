@@ -3,9 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   overflow: hidden;
 }
+
 section {
   display: flex;
   justify-content: center;
@@ -13,25 +15,24 @@ section {
   height: 100vh;
   background: #034071;
 }
-section .runway {
+
+.runway {
   position: relative;
   width: 400px;
   height: 100vh;
   background: #1378bc;
-  border-left: 20px solid rgba(0, 0, 0, 0.25);
-  border-right: 20px solid rgba(0, 0, 0, 0.25);
-  transition: transform 1s;
-  transition-delay: 1s;
+  border: 0 20px solid rgba(0, 0, 0, 0.25);
+  transition: transform 1s 1s;
   transform-origin: top;
 }
-/* plane fly on left click & hold */
-/* plane land on release left click */
+
 section:active .runway {
-  transform: scaleX(0.7) scaleY(0);
+  transform: scale(0.7, 0);
   transition-delay: 0s;
   transform-origin: bottom;
 }
-section .runway::before {
+
+.runway::before {
   content: "";
   position: absolute;
   top: 0;
@@ -39,27 +40,20 @@ section .runway::before {
   transform: translateX(-50%);
   width: 15px;
   height: 100%;
-  background: repeating-linear-gradient(
-    transparent 0%,
-    transparent 50%,
-    white 50%,
-    white 100%
-  );
+  background: repeating-linear-gradient(transparent 0%, transparent 50%, white 50%, white 100%);
   background-size: 20px 320px;
   animation: animateRunway 0.5s linear infinite;
 }
-/* effect on left click hold */
+
 section:active .runway::before {
   animation: animateRunway 0.3s linear infinite;
 }
+
 @keyframes animateRunway {
-  0% {
-    background-position-y: 0px;
-  }
-  100% {
-    background-position-y: 640px;
-  }
+  0% { background-position-y: 0; }
+  100% { background-position-y: 640px; }
 }
+
 .plane {
   position: absolute;
   padding-left: 20px;
@@ -67,13 +61,15 @@ section:active .runway::before {
   max-width: 250px;
   pointer-events: none;
   filter: drop-shadow(10px 10px 0 rgba(0, 0, 0, 0.5));
-  transition: 5s;
+  transition: padding-left 5s, max-width 5s, filter 5s;
 }
+
 section:active .plane {
   padding-left: 35px;
   max-width: 500px;
   filter: drop-shadow(200px 200px 0 rgba(0, 0, 0, 0));
 }
+
 .clouds {
   position: absolute;
   left: 0;
@@ -83,12 +79,13 @@ section:active .plane {
   pointer-events: none;
   opacity: 0;
   transition: opacity 2s;
-  transition-delay: 0s;
 }
+
 section:active .clouds {
   opacity: 1;
   transition-delay: 1s;
 }
+
 .clouds img {
   position: absolute;
   left: 0;
@@ -96,27 +93,23 @@ section:active .clouds {
   animation: animateClouds 4s linear infinite;
   animation-delay: calc(-1.5s * var(--i));
 }
+
 .clouds2 {
   right: 0;
   transform: rotate(180deg);
 }
+
 .clouds2 img {
   animation: animateClouds2 4s linear infinite;
   animation-delay: calc(-1.5s * var(--i));
 }
+
 @keyframes animateClouds {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
 }
+
 @keyframes animateClouds2 {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
 }
