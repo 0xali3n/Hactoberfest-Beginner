@@ -44,3 +44,82 @@ body{
     justify-content: center;
     align-items: center;
 }
+/* ================================
+   Food Menu Section
+================================= */
+.food-menu {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f8f8f8;  /* section background */
+  font-family: Arial, sans-serif;
+}
+
+.food-menu h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* ================================
+   Flex Container for Menu Items
+================================= */
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;          /* allows wrapping to multiple rows */
+  justify-content: center;  /* center the cards */
+  gap: 20px;                /* spacing between cards */
+}
+
+/* ================================
+   Individual Menu Card
+================================= */
+.menu-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  flex: 0 0 250px;         /* fixed width, do not stretch */
+  max-width: 300px;         /* optional cap for large screens */
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.menu-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* ================================
+   Card Content Styling
+================================= */
+.menu-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #e74c3c;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.menu-item .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* ================================
+   Responsive Adjustments
+================================= */
+@media screen and (max-width: 600px) {
+  .food-menu h2 {
+    font-size: 2rem;
+  }
+  .menu-item {
+    flex: 0 0 90%; /* cards almost full width on small screens */
+  }
+}
